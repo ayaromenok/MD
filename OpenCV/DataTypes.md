@@ -1,10 +1,10 @@
 DataTypes
 ========================
-### Table of Content
+### Table of Content <a name = "toc"></a>
 
 1. [Point type](#pointtype)
-- [Scalar type](#scalartype)
-- [Size type](#sizetype)
+2. [Scalar type](#scalartype)
+3. [Size type](#sizetype)
 
 ### 1. Point Type <a name = "pointtype"></a>
 
@@ -21,7 +21,7 @@ Data type for `point 2x / 3x`
 | FP64 dot product | `double x = 1.ddot(p2);` |  |
 | Cross product | `p1.cross(p2);` | for three-dimentional point only |
 | Query if point `p` inside triange `r` | `p.inside (r);` | for three-dimentional point only  |
-
+[back to top](#toc)
 
 ### 2. Scalar Type <a name="scalartype"></a>
 
@@ -35,7 +35,7 @@ Data type for `scalar`, which is `point 4x`;
 | Element-wise multiplication | `s1.mul(s2);` |  |
 | (Quaternion) conjugation | `s.conj();`| returns `cv::Scalar(s0, -s1, -s2, -s2)` |
 | (Quaternion) real test| `s.isReal();` | returns `true` if `s1==s2==s3==0` |
-
+[back to top](#toc)
 
 ### 3. Size Type <a name="sizetype"></a>
 
@@ -48,6 +48,7 @@ Data type for `size`, which is `point 2x`;  Can't cast to fixed vector classes;
 | Value constructor | `cv::Size2f sz(w,h);` |  |
 | Member access | `sz.width; sz.height;` |  |
 | Compute area | `sz.area();` |  |
-
+[back to top](#toc)
 ### Appendix
 |  |  |  |
+[back to top](#toc)

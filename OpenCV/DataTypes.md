@@ -2,9 +2,9 @@ DataTypes
 ========================
 ### Table of Content
 
-	1. [Point type](#pointtype)
-	2. [Scalar type](#scalartype)
-	3. [Size type](#sizetype)
+1. [Point type](#pointtype)
+- [Scalar type](#scalartype)
+- [Size type](#sizetype)
 
 ### 1. Point Type <a name = "pointtype"></a>
 
@@ -37,7 +37,7 @@ Data type for `scalar`, which is `point 4x`;
 | (Quaternion) real test| `s.isReal();` | returns `true` if `s1==s2==s3==0` |
 
 
-### 2. Size Type <a name="sizetype"></a>
+### 3. Size Type <a name="sizetype"></a>
 
 Data type for `size`, which is `point 2x`;  Can't cast to fixed vector classes;
 

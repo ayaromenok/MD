@@ -5,8 +5,12 @@ DataTypes
 1. [Point type](#pointtype)
 2. [Scalar type](#scalartype)
 3. [Size type](#sizetype)
+4. [Rect type](#recttype)
+ 	- [Rect operatos](#rectoperators)	
+5. [RotatedRect type](#rotatedrecttype)
 
-### 1. Point Type <a name = "pointtype"></a>
+
+### 1. cv::Point <a name = "pointtype"></a>
 
 Data type for `point 2x / 3x`
 
@@ -24,7 +28,7 @@ Data type for `point 2x / 3x`
 
 [back to top](#toc)
 
-### 2. Scalar Type <a name="scalartype"></a>
+### 2. cv::Scalar <a name="scalartype"></a>
 
 Data type for `scalar`, which is `point 4x`;
 
@@ -39,7 +43,7 @@ Data type for `scalar`, which is `point 4x`;
 
 [back to top](#toc)
 
-### 3. Size Type <a name="sizetype"></a>
+### 3. cv::Size <a name="sizetype"></a>
 
 Data type for `size`, which is `point 2x`;  Can't cast to fixed vector classes;
 
@@ -50,6 +54,55 @@ Data type for `size`, which is `point 2x`;  Can't cast to fixed vector classes;
 | Value constructor | `cv::Size2f sz(w,h);` |  |
 | Member access | `sz.width; sz.height;` |  |
 | Compute area | `sz.area();` |  |
+
+[back to top](#toc)
+
+### 4. cv::Rect  <a name="recttype"></a>
+
+Data type for `rect`, which is `point 2x`and `size`;
+
+| Operation | Example | Comments |
+|---|---|---|
+| Default constructor | `cv::Rect r();` |  |
+| Copy constructor | `cv::Rect r(r1);` |  |
+| Value constructor | `cv::Rect R(x,y,w,h);` |  |
+| Construct from origin and size | `cv::Rect(p,sz);` |  |
+| Construct from two corners | `cv::Rect(p1,p2);` |  |
+| Member access | `r.x; r.y; r.width; r.height;` |  |
+| Compute area | `r.area();` |  |
+| Extract upper-left corner | `r.tl();` | Top-Left |
+| Extract bottom-right corner | `r.br();` | Bottom-Right |
+| Determinate if point `p`p inside rectangle `r` | `r.contains(p);` |  |
+
+[back to top](#toc)
+
+####  4.1 cv::Rect operators  <a name="rectoperators"></a>
+
+Operators, supported by `cv::Rect``;
+
+| Operation | Example | Comments |
+|---|---|---|
+| Intersection of rectangles `r1` and `r2` | `cv::Rect r3 = r1 & r2; r1 &= r2;` |  |
+| Minimum area rectangle containing rectangles `r1` and `r2` | `cv::Rect r3 = r1|r2; r1 |= r2;` |  |
+| Translate rectangle `r` by an amount `x` | `cv::Rect rx = r+x; r += x;` |  |
+| Enlarge a rectangle `r` by an amount given by size `s` | `cv::Rect rs = r+s; r+= s;` |  |
+| Compare rectangles `r1` and `r2` for exact equality | `bool eq = (r1 == r2);` |  |
+| Compare rectangles `r1` and `r2` for inequality  | `bool ne = (r1 != r2);` |  |
+
+[back to top](#toc)
+
+### 5. cv:Rotated:Rect  <a name="rotatedrecttype"></a>
+
+`cv::RotatedRect` located in relation to it's center, while `cv::Rect` to it's uppler-left conner
+
+| Operation | Example | Comments |
+|---|---|---|
+| Default constructor | `cv::RotatedRect rr();` |  |
+| Copy constructor | `cv::RotatedRect rr2(rr1);` |  |
+| Value constructor | `cv::RotetedRect R(p, sz, theta);` |  |
+| Construct from two corners | `cv::RotetedRect(p1,p2);` |  |
+| Member access | `rr.center; rr.size; rr.angle` |  |
+| Return a list of the corners | `rr.points(pts[4);` |  |
 
 [back to top](#toc)
 

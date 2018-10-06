@@ -1,7 +1,9 @@
 README
 ========================
 
-This  readme.md created as a stub for github MD parser.
+# OpenCV
+[OpenCV](https://opencv.org) - Open Source Computer Vision Library. Sometimes accelerated with OpenCL/Cuda; Supported on Linux (includng Raspberry Pi), Windows, Linux, iOS, Android;
+
 ## Table of Context <a name="toc"></a>
 - [Data types](#datatypes)
 
@@ -11,5 +13,6 @@ This  readme.md created as a stub for github MD parser.
  - [cv::Size](DataTypes.md#sizetype)
  - [cv::Rect](DataTypes.md#recttype)
  - [cv::RotatedRect](DataTypes.md#rotatedrecttype)
+ - [cv::Matx](DataTypes.md#matxtype)
 
 [back to top](#toc)

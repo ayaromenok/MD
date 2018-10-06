@@ -24,6 +24,10 @@ Knowledge collection repo, MarkDown(MD) based. It will include my conspects on k
  - Linux;
  - Windows;
  - OSX;
+
+### Boards
+ - Raspberry Pi;
+ - ESP8266;
  
 ## Issues with QOwnNotes
 

@@ -5,7 +5,7 @@
 Knowledge collection repo, MarkDown(MD) based. It will include my conspects on key technologies and platforms, some of them is digital form of old paper-based notes.
 
 ## Technologies:
- - OpenGL;
+ - [OpenGL](OpenGL/README.md);
  - Vulkan;
  - [OpenCV](OpenCV/README.md);
  - Qt;
@@ -26,7 +26,7 @@ Knowledge collection repo, MarkDown(MD) based. It will include my conspects on k
  - OSX;
 
 ### Boards
- - Raspberry Pi;
+ - [Raspberry Pi](RaspberryPi/README.md);
  - ESP8266;
  
 ## Issues with QOwnNotes

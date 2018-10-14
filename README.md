@@ -1,17 +1,30 @@
 # README
+## Table of Contents
 
-## Intro 
+ - [Introduction](#intro)
+ - [Technologies](#tech)
+ - [Hardware](#hard)
+ - [Platforms](#platforms)
+
+## Intro  <a name="intro"></a>
 
 Knowledge collection repo, MarkDown(MD) based. It will include my conspects on key technologies and platforms, some of them is digital form of old paper-based notes.
 
-## Technologies:
+## Technologies: <a name="tech"></a>
  - [OpenGL](OpenGL/README.md);
  - Vulkan;
  - [OpenCV](OpenCV/README.md);
  - Qt;
  - OpenCL/CUDA;
 
-## Platforms:
+## Hardware: <a name="hard"></a>
+
+### Boards:
+ - [All boards](Hardware/README.md)
+ - [Tegra K1](Hardware/tegraK1.md)
+ - [Raspberry Pi](Hardware/rpicompute.md);
+
+## Platforms: <a name="platforms"></a>
 
 ### Mobile
 
@@ -25,11 +38,8 @@ Knowledge collection repo, MarkDown(MD) based. It will include my conspects on k
  - Windows;
  - OSX;
 
-### Boards
- - [Raspberry Pi](RaspberryPi/README.md);
- - ESP8266;
- 
-## Issues with QOwnNotes
+
+## Issues with QOwnNotes <a name="qownnotes"></a>
 
 - QOnwNotes **automatically** rename file to the 1st level header (thats why this one have `# README` on top)
 - image link use local file

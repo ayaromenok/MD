@@ -29,10 +29,33 @@ Just install from sources:
 OpenCL software implementation
 [buil info ](https://github.com/pocl/pocl/blob/master/doc/sphinx/source/install.rst)
 
+
 build:
 `cmake -DTHREADS_HAVE_PTHREAD_ARG=ON -DLCC_HOST_CPU=cortex-a15 -DENABLE_FP64=ON ..`
 
-` -DENABLE_CUDA=ON` require LLVM-4.0+
+to build POCL with CUDA required LLVM 4.0+, while default in Ubuntu 14.04LTS is 3.8.
+
+` -DENABLE_CUDA=ON`
+#### LLVM 4.0+
+
+- useful [cmake variables](https://llvm.org/docs/CMake.html)
+- [how to build on arm](https://llvm.org/docs/HowToBuildOnARM.html)
+
+get llvm code 
+
+`git clone http://llvm.org/git/llvm.git`
+
+`cd llvm/tools & git clone http://llvm.org/git/clang.git &cd ../..`
+
+`cd llvm/projects & git clone http://llvm.org/git/compiler-rt.git & cd ../..`
+
+`cd llvm/projects & git clone http://llvm.org/git/test-suite.git & cd ../..`
+
+`mkdir -p build & cd build`
+
+config:
+`cmake -D LLVM_TARGETS_TO_BUILD="ARM;NVPTX" -DCMAKE_BUILD_TYPE=Release -D CMAKE_C_FLAGS=-mcpu=cortex-a15 -D CMAKE_CXX_FLAGS=-mcpu=cortex-a15 ../llvm`
+
 ### OpenCV
 
 #### CUDA

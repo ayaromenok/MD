@@ -56,6 +56,11 @@ get llvm code
 config:
 `cmake -D LLVM_TARGETS_TO_BUILD="ARM;NVPTX" -DCMAKE_BUILD_TYPE=Release -D CMAKE_C_FLAGS=-mcpu=cortex-a15 -D CMAKE_CXX_FLAGS=-mcpu=cortex-a15 ../llvm`
 
+#### glew
+
+glew used by **pocl** to implement CL to GL. need to be installed. beete from ` git clone https://github.com/nigels-com/glew.git glew` - since trysty glew support only GL 4.4, while tegra support 4.5
+`cd glew/auto & make & cd .. & make install`
+
 ### OpenCV
 
 #### CUDA
@@ -68,3 +73,5 @@ config:
 `-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules`
 
 Qt need to be build with Desktop OpenGL only - need evaluate/send bug report
+
+be sure to have `-lOpenCL` in `/opencv-3.4.3/build/samples/opencl/CMakeFiles/example_opencl_opencl-opencv-interop.dir/link` file with **OpenCL** build

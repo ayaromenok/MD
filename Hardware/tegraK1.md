@@ -140,6 +140,7 @@ tegra K1 use hard-float only, so no `gnu-stubs-soft.h` - change /usr/inlude/gun/
 
 - can be build with **CUDA**, which required gcc **below 4.10**
 - `-D WITH_CUDA=ON`
+- need to clear install if  use OpenCV after 2018/10
 
 `cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D ENABLE_NEON=ON -D ENABLE_VFPV3=ON -D BUILD_TESTS=ON -D BUILD_EXAMPLES=ON  ..`
 
@@ -194,5 +195,7 @@ where GR3D - GPU freq in MHz, cpu is CPU freq in MHz, EMC is memory
 echo 852000000 > /sys/kernel/debug/clock/override.gbus/rate
  echo 1 > /sys/kernel/debug/clock/override.gbus/state
 ```
-better to use something in 468/540MHz area
 
+#### Camera
+OmniVision OV5693 - front and back
+driver [for intel Atom](https://cateee.net/lkddb/web-lkddb/VIDEO_ATOMISP_OV5693.html) - use Atom ISP

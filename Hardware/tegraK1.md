@@ -170,6 +170,8 @@ as a result - `Vulkan API Version: 1.0.3`
 #### Assimp 
 `cmake -DASSIMP_BUILD_TESTS=OFF ..`
 
+#### Qt
+`./configure --release -opengl desktop -opensource -confirm-license -prefix /usr/local`
 ### Other tools
 
 `x11vnc -forever` to avoid exist after every session

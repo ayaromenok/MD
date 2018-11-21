@@ -57,8 +57,8 @@ SSH:
 - `sudo cp dt-blob-dualcam.dtb /boot/dt-blob.bin`;
 - `reboot` to load blobs;
 -  correct output is: 
-`vcgencmd get_camera
-supported=2 detected=2`;
+`vcgencmd get_camera`
+`supported=2 detected=2`;
 
 get images: `raspivid -cs 0 -o image0.jpg` for 1st camera and  `raspivid -cs 1 -o image1.jpg` for second
 

@@ -20,6 +20,8 @@ run on particular core:
 - `taskset 0x30 ./runtest` (0x30 = 4+5 )
 - `taskset -c 4,5 ./runtest`
 
+`sudo cpufreq-det -c 5 -g performance`
+
 [back to top](#toc)
 
 

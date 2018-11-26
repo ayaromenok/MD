@@ -23,6 +23,7 @@ Knowledge collection repo, MarkDown(MD) based. It will include my conspects on k
  - [All boards](Hardware/README.md)
  - [Tegra K1](Hardware/tegraK1.md)
  - [Raspberry Pi](Hardware/rpicompute.md);
+ - [RK3399/NanoPi M4](Hardware/rk3399_nanopiM4.md)
 
 ## Platforms: <a name="platforms"></a>
 

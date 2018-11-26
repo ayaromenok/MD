@@ -5,7 +5,7 @@ README
 ## Table of Context <a name="toc"></a>
 - [Raspberry PI compute](#rpicompute)
 - [Tegra K1](#tegraK1)
-- [RK3399/NanoPi M4](#rk339_npm4)
+- [RK3399/NanoPi M4](#rk3399_npm4)
 - [Performance Tests](#perftests)
 
 ## Raspberry PI Compute <a name="rpicompute"></a>
@@ -29,9 +29,10 @@ README
 
 ## RK3399 NanoPI M4 <a name="rk3399_npm4"></a>
 
-- [board](rk3399_nanopiM4.md#board)
-- [software](rk3399_nanopiM4.md#soft)
-	- [opencv](rk3399_nanopiM4.md#opencv)
+- [Hardware](rk3399_nanopiM4.md#hard)
+	- [Cores](rk3399_nanopiM4.md#cores)
+- [Software](rk3399_nanopiM4.md#soft)
+	- [OpenCV](rk3399_nanopiM4.md#opencv)
 
 [back to top](#toc)
 

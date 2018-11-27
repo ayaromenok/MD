@@ -31,6 +31,12 @@ run on particular core:
 
 General [wiki](http://wiki.friendlyarm.com/wiki/index.php/NanoPi_M4) including
 
+Software download - [gdrive](https://drive.google.com/drive/folders/1gaLKSlIHvqhJ5cASTFGSjJ9XvtgosZFQ)
+
+Software install
+`sudo dd bs=4M if=rk3399-sd-lubuntu-desktop-xenial-4.4-armhf-20181112.img of=/dev/mmcblk0p1 status=progress oflag=sync`
+
+
 power supply: `USB-type-C, 5V/3A`
 
 user: `pi/pi`
@@ -60,9 +66,11 @@ echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 let's use only A72 cores to build:
 
 ```
-mkdir build/opencv
-cd build/opencv
-cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules -D BUILD_TESTS=ON -D BUILD_EXAMPLES=OFF ../../opencv
+mkdir build
+cd build
+mkdir opencv
+cd opencv
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules -D BUILD_TESTS=ON -D BUILD_EXAMPLES=ON -D INSTALL_C_EXAMPLES=ON ../../opencv
 make -j 2
 ```
 

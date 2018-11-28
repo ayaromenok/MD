@@ -136,15 +136,21 @@ tegra K1 use hard-float only, so no `gnu-stubs-soft.h` - change /usr/inlude/gun/
 
 ### OpenCV
 
-#### CUDA
+#### missed files
+In case if opencv/CMakeDownlaods.txt contain errors, manual upload of missed files required:
+
+`scp -r build/opencv/downloads/xfeatures2d az@10.0.0.7:/home/az/sdk/src/opencv`
+
+
+#### build with CUDA
 
 - can be build with **CUDA**, which required gcc **below 4.10**
-- `-D WITH_CUDA=ON`
+- `-D WITH_CUDA=ON` and `opencv_contrib` required for cuda build with 4.x.x
 - need to clear install if  use OpenCV after 2018/10
 
-`cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D ENABLE_NEON=ON -D ENABLE_VFPV3=ON -D BUILD_TESTS=ON -D BUILD_EXAMPLES=ON  ..`
-
-`-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules`
+```
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D ENABLE_NEON=ON -D ENABLE_VFPV3=ON -D BUILD_TESTS=ON -D BUILD_EXAMPLES=ON -D WITH_CUDA=ON -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules ../../opencv
+```
 
 Qt need to be build with Desktop OpenGL only - need evaluate/send bug report
 
@@ -172,6 +178,7 @@ as a result - `Vulkan API Version: 1.0.3`
 
 #### Qt
 `./configure --release -opengl desktop -opensource -confirm-license -prefix /usr/local`
+
 ### Other tools
 
 `x11vnc -forever` to avoid exist after every session

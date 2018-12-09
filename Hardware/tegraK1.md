@@ -177,7 +177,9 @@ as a result - `Vulkan API Version: 1.0.3`
 `cmake -DASSIMP_BUILD_TESTS=OFF ..`
 
 #### Qt
-`./configure --release -opengl desktop -opensource -confirm-license -prefix /usr/local`
+`./configure --release -opengl desktop -opensource -confirm-license -prefix /usr/local -no-eglfs`
+
+Qt 5.12 can't complile with EGLFS
 
 ### Other tools
 

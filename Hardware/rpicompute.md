@@ -119,6 +119,24 @@ For cross-compilation:
 For RPI compilation
 `./configure --release -opengl es2 -opensource -confirm-license -make libs -no-use-gold-linker`
 
+```
+mkdir build
+cd build
+mkdir qt
+cd qt
+../../qt/configure --release -opengl es2 \
+        -opensource -confirm-license \
+        -prefix /usr/local \
+        -skip qtlocation \
+        -skip qtwebengine \
+        -skip qtwebchannel \
+        -skip qtwebglplugin \
+        -skip qtwebsockets \
+        -skip qtwebview \
+        -skip qtcanvas3d \
+        -skip qtdatavis3d \
+	    -skip qtvirtualkeyboard
+```
 
  - [Configure QtCreator](https://www.ics.com/blog/configuring-qt-creator-raspberry-pi)
 
@@ -131,3 +149,23 @@ Gstreamer and most of the dev libs already installed with Qt from above
 `cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules -D ENABLE_NEON=ON -D ENABLE_VFPV3=ON -D BUILD_TESTS=OFF -D BUILD_EXAMPLES=OFF -D WITHQT=ON ..`
 
 Note`WITH_OPENGL=ON`
+
+#### POCL
+
+`sudo apt install libhwloc-dev ocl-icd-opencl-dev libglew-dev zlib1g-dev libedit-dev`
+
+`sudo apt install clang-4.0 libclang-4.0-dev`
+
+```
+cmake -DLLC_HOST_CPU=cortex-a53 -DWITH_LLVM_CONFIG=/usr/bin/llvm-config-4.0 -DENABLE_ICD=0 -DEXTRA_KERNEL_CL_FLAGS=-mfpu=neon -DEXTRA_KERNEL_CXX_FLAGS=-mfpu=neon ../../pocl
+```
+
+installed OpenCL driver:
+```
+./poclcc -l
+LIST OF DEVICES:
+0:
+  Vendor:   ARM
+    Name:   pthread-cortex-a53
+ Version:   OpenCL 1.2 pocl HSTR: pthread-armv6-unknown-linux-gnueabihf-cortex-a53
+```

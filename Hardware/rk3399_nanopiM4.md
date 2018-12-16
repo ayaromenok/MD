@@ -42,6 +42,11 @@ power supply: `USB-type-C, 5V/3A`
 user: `pi/pi`
 root: `root/pa`
 
+How to install:
+
+- [Mate](https://www.friendlyarm.com/Forum/viewtopic.php?f=62&t=2036) to ubuntu 18.04
+- [htop](https://github.com/avafinger/htop-2.1.1_enhanced-version/tree/master/htop) with big\little cores(require root to show Frequency correctly)
+
 [back to top](#toc)
 
 ### Swap

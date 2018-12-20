@@ -26,6 +26,13 @@ run on particular core:
 
 [back to top](#toc)
 
+### GPU
+frequency: `/sys/class/misc/mali0/device/devfreq/ff9a0000.gpu/cur_freq` - 800MHz
+can be 200, 300, 400, 600, 800 MHz
+
+[back to top](#toc)
+
+
 
 ## Software <a name="soft"></a>
 
@@ -44,7 +51,7 @@ root: `root/pa`
 
 How to install:
 
-- [Mate](https://www.friendlyarm.com/Forum/viewtopic.php?f=62&t=2036) to ubuntu 18.04
+- [Mate](https://www.friendlyarm.com/Forum/viewtopic.php?f=62&t=2036) to ubuntu 18.04 - but it's **broke Arm Mali drivers**!
 - [htop](https://github.com/avafinger/htop-2.1.1_enhanced-version/tree/master/htop) with big\little cores(require root to show Frequency correctly)
 
 [back to top](#toc)
@@ -68,6 +75,8 @@ echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 - OpenCV can't be build with python - `gcc` just hangup on py.cpp. need to temporary remove physicaly `/usr/bin/python`
 - OpenCL/superres crashed due to workgroup_size, which can be 64,128,256 and depends from complexity of the kernel
 
+`sudo apt install opencl-c-headers cmake`
+
 let's use only A72 cores to build:
 
 ```
@@ -75,7 +84,7 @@ mkdir build
 cd build
 mkdir opencv
 cd opencv
-cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules -D BUILD_TESTS=ON -D BUILD_EXAMPLES=ON -D INSTALL_C_EXAMPLES=ON ../../opencv
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules -D BUILD_TESTS=ON -D BUILD_EXAMPLES=ON -D INSTALL_C_EXAMPLES=ON -D WITH_OPENCL=ON ../../opencv
 make -j 2
 ```
 

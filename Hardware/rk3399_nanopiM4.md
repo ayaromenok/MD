@@ -4,6 +4,9 @@ rk3399_nanopiM4
 - [Hardware](#hard)
 	- [Cores](#cores)
 - [Software](#soft)
+ 	- [default software](#defaultSoft)
+	- [swap](#swap)
+	- [Armbian](#armbian)
 	- [OpenCV](#opencv)
 
 ## Hardware <a name="hard"></a>
@@ -36,6 +39,8 @@ can be 200, 300, 400, 600, 800 MHz
 
 ## Software <a name="soft"></a>
 
+### Default friendlyarm software <a name="defaultSoft"> </a>
+
 General [wiki](http://wiki.friendlyarm.com/wiki/index.php/NanoPi_M4) including
 
 Software download - [gdrive](https://drive.google.com/drive/folders/1gaLKSlIHvqhJ5cASTFGSjJ9XvtgosZFQ)
@@ -67,6 +72,20 @@ sudo cp /etc/fstab /etc/fstab.bak
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 
 ```
+[back to top](#toc)
+
+
+### Armbian <a name="armbian"></a>
+
+default login: `root`
+default pass: `1234`
+
+No accelerated drivers provided - need to install:
+
+ - OpenCL `https://github.com/avafinger/nanopi-m4-ubuntu-base-minimal/releases/tag/v1.2.1`
+ - Open GL ES2 not working for now
+ - for GL/GLES2/CLinfo `sudo apt install clinfo mesa-utils mesa-utils-extra` 
+ - Qt5.9.5 `sudo apt install build-essential qt5-default qt5-doc qtbase5-examples qt5-doc-html qtbase5-doc-html` 
 [back to top](#toc)
 
 

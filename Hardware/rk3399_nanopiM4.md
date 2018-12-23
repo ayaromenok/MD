@@ -94,7 +94,8 @@ No accelerated drivers provided - need to install:
 - OpenCV can't be build with python - `gcc` just hangup on py.cpp. need to temporary remove physicaly `/usr/bin/python`
 - OpenCL/superres crashed due to workgroup_size, which can be 64,128,256 and depends from complexity of the kernel
 
-`sudo apt install opencl-c-headers cmake`
+ - to build with OpenCL: `sudo apt install opencl-c-headers cmake`
+ - to build on Armbian: `sudo apt install libgtk2.0-dev pkg-config`
 
 let's use only A72 cores to build:
 

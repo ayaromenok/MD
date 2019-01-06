@@ -19,7 +19,7 @@ Use `raspbian-stretch-lite` image to fit to 4GB of rpi compute
 Flash CM's EMMC as described in [official guide](https://www.raspberrypi.org/documentation/hardware/computemodule/cm-emmc-flashing.md) :
 
 - `sudo ./rpiboot`
-- `sudo dd if=2018-06-27-raspbian-stretch-lite.img of=/dev/sdc bs=4MiB`
+- `sudo dd if=2018-06-27-raspbian-stretch-lite.img of=/dev/sdc bs=4MiB status=progress oflag=sync`
 
 Config:
 

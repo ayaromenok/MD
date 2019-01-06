@@ -41,7 +41,7 @@ to build POCL with CUDA required LLVM 4.0+, while default in Ubuntu 14.04LTS is 
 also need to disable `shuffle_double` in `/test/kernel/CmakeLists.txt`
 
 - line 288 `kernel\test_shuffle_double`
-- line 313 `kernel\test_shuffle_double`
+- line 313 `kernel\test_-shuffle_double`
 
 in case of error in CUDA build cumment `cuStreamWaitValue32` related code and change `event->command.run.kernel` to `event->command->command.run.kernel` type.  
 ```

@@ -63,9 +63,21 @@ SSH:
 
 get images: `raspivid -cs 0 -o image0.jpg` for 1st camera and  `raspivid -cs 1 -o image1.jpg` for second
 
+[stereo pi IO](http://www.stereopi.com/)
+
+[perfect doc for cameras](https://picamera.readthedocs.io/en/latest/fov.html)
+
+[1k RPI cam](https://www.raspberrypi.org/forums/viewtopic.php?t=212518)
+
+
 #### Video4Linux
 
 At 2018.06 build Video4Linux driver is already included, but not loaded by default, so `bcm2835-v4l2` need to be added to /ect/modules. `v4l2-ctl --list-formats` output a list of supported formats. Additional info can be found at [rpi forum](https://www.raspberrypi.org/forums/viewtopic.php?t=62364)
+
+### OpenCL for VC4
+
+[attempt to implement OpenCL 1.2 for pri](https://github.com/doe300/VC4CL), [part 2](https://github.com/doe300/VC4C)
+
 
 ### Software
 #### Swap file size
@@ -75,6 +87,10 @@ than restart
 
 - `sudo /etc/init.d/dphys-swapfile stop`
 - `sudo /etc/init.d/dphys-swapfile start`
+
+#### ssh without password
+
+[ssh login without passwordcgparted](https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md)
 
 #### Partitions
 Since rpi Compute have only 4GB of EMMC memory, it's necessary to move some data to SD/USBFlash drive, like:

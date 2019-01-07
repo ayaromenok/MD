@@ -29,6 +29,7 @@ Config:
 - set localization option to en.us-utf8 by `sudo raspi-config`
 - set correct timezone`dpkg-reconfigure tzdata`
 
+installing GUI brake broadcom drivers;
 [installing GUI](https://www.raspberrypi.org/forums/viewtopic.php?p=890408#p890408), including Mate
 
 Autologin for Console:

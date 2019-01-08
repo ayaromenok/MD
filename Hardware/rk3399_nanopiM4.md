@@ -3,6 +3,8 @@ rk3399_nanopiM4
 ## Table of Context <a name="toc"></a>
 - [Hardware](#hard)
 	- [Cores](#cores)
+	- [GPU](#gpu)
+	- [make SD card](#makeSDcard)
 - [Software](#soft)
  	- [default software](#defaultSoft)
 	- [swap](#swap)
@@ -15,7 +17,7 @@ MIPI-CSI - only [own 13.2MP cam](https://www.friendlyarm.com/index.php?route=pro
 
 [back to top](#toc)
 
-### Cores:<a name="cores"></a>
+### Cores <a name="cores"></a>
  
 - 0-3 - A53
 - 4-5 - A72
@@ -29,11 +31,10 @@ run on particular core:
 
 [back to top](#toc)
 
-### GPU
+### GPU<a name="gpu"></a>
+ 
 frequency: `/sys/class/misc/mali0/device/devfreq/ff9a0000.gpu/cur_freq` - 800MHz
 can be 200, 300, 400, 600, 800 MHz
-
-[back to top](#toc)
 
 
 `sudo systemctl disable ondemand` - for ubuntu 18.04
@@ -63,6 +64,14 @@ Required X11 - can't recognize core
 scp libinterceptor.so pi@192.168.8.121:/home/pi
 scp mgddaemon  pi@192.168.8.121:/home/pi
 ```
+
+[back to top](#toc)
+
+### Make SD card <a name="makeSDcard"></a>
+
+[Ubuntu18 docker](https://github.com/friendlyarm/friendlyelec-ubuntu18-docker)
+
+[https://github.com/friendlyarm/sd-fuse_rk3399](https://github.com/friendlyarm/sd-fuse_rk3399)
 
 [back to top](#toc)
 

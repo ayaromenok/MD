@@ -32,6 +32,11 @@ Config:
 installing GUI brake broadcom drivers;
 [installing GUI](https://www.raspberrypi.org/forums/viewtopic.php?p=890408#p890408), including Mate
 
+```
+sudo apt-get install lightdm
+sudo apt-get install mate-desktop-environment-core
+```
+
 Autologin for Console:
 
 - `raspi-config`
@@ -51,15 +56,24 @@ autologin-user-timeout=0`
 SSH:
 `ssh -Y pi@raspberrypi`
 
+VNC:
+
+[guide](https://www.raspberrypi.org/documentation/remote-access/vnc)
+
+`sudo apt-get install realvnc-vnc-server realvnc-vnc-viewer`
+
+`sudo raspi-config > Interface Option > VNC:yes`
+
+
 ### dual Cam
 - `sudo raspi-config` and enable the camera;
 - `wget https://www.raspberrypi.org/documentation/hardware/computemodule/dt-blob-dualcam.dts`
-- `dtc -I dts -O dtb -o dt-blob-dualcam.dtb dt-blob-dualcam.dts`;
-- `sudo cp dt-blob-dualcam.dtb /boot/dt-blob.bin`;
-- `reboot` to load blobs;
+- `dtc -I dts -O dtb -o dt-blob-dualcam.dtb dt-blob-dualcam.dts`
+- `sudo cp dt-blob-dualcam.dtb /boot/dt-blob.bin`
+- `sudo reboot` to load blobs;
 -  correct output is: 
 `vcgencmd get_camera`
-`supported=2 detected=2`;
+`supported=2 detected=2`
 
 get images: `raspivid -cs 0 -o image0.jpg` for 1st camera and  `raspivid -cs 1 -o image1.jpg` for second
 
@@ -95,12 +109,16 @@ than restart
 #### Partitions
 Since rpi Compute have only 4GB of EMMC memory, it's necessary to move some data to SD/USBFlash drive, like:
 
+`/dev/sda1 /mnt/32GB ext4 defaults 0 1`
+
+```
  - /home/pi 
  - /usr/local
  - /usr/share
  - /usr/include
  - swap file
  - /var/cache/apt
+```
 
  - looks like impossible to move `/usr/lib` even it should be possible according Unix standard ;) 
  

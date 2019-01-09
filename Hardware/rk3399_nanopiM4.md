@@ -142,6 +142,9 @@ No accelerated drivers provided - need to install:
  - Open GL ES2 not working for now
  - for GL/GLES2/CLinfo `sudo apt install clinfo mesa-utils mesa-utils-extra` 
  - Qt5.9.5 `sudo apt install build-essential qt5-default qt5-doc qtbase5-examples qt5-doc-html qtbase5-doc-html` 
+
+kernel sources can be installed from armbian-config 
+
 [back to top](#toc)
 
 ### avafinger Linux
@@ -149,6 +152,22 @@ No accelerated drivers provided - need to install:
 Minimal linux [https://github.com/avafinger/nanopi-m4-ubuntu-base-minimal] with KODI.
 
 [back to top](#toc)
+
+### kernel <a name=""kernel"></a>
+
+[details - sd-fuse_rk3399](https://github.com/friendlyarm/sd-fuse_rk3399)
+ 
+```
+sudo apt install bc liblz4-tool
+git clone https://github.com/friendlyarm/kernel-rockchip --depth 1 -b nanopi4-linux-v4.4.y kernel-rockchip
+cd kernel-rockchip
+```
+in case of buil on board need to remove cross compile prefix in nanopi4linux_defconfig
+
+```
+make ARCH=arm64 nanopi4_linux_defconfig
+make ARCH=arm64 nanopi4-images
+```
 
 
 ### OpenCV <a name ="opencv"></a>

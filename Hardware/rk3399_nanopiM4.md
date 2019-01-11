@@ -145,6 +145,7 @@ No accelerated drivers provided - need to install:
 
 kernel sources can be installed from armbian-config 
 
+OpenCL stillhave issues under OpenCV/perf test
 [back to top](#toc)
 
 ### avafinger Linux

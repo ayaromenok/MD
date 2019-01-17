@@ -2,22 +2,18 @@ perftests
 ========================
 
 ## Table of Context <a name="toc"></a>
-- [CPU/OpenCV](#cpucv)
+- OpenCL
+	- [LuxMark 3.1](#luxmark31)
 
-## CPU/OpenCV <a name="cpucv"></a>
-`./opencv_perf_line_descriptor`
+## OpenCL/LuxMark 3.1 <a name="luxmark31"></a>
+OS Linux
 
-| test | rpi3 | tegrak1 | rk3399 |  |
-|---|---|---|---|---|
-|`matching.single_match` |  | 119| 81 |  |
-|`knn_match_distances_test` |  | fail | fail |  |
-|`radius_match.radius_match_distances_test`|  | 2395 | 1262 |  |
-|`file_str_descriptors.descriptors/0`|  | 544 | 467 |  |
-|`file_str_descriptors.descriptors/0`|  | 460 | 414 |  |
-|`file_str_detect.detect/0`|  | 2745 | 229 |  |
-|`file_str_detect.detect/1`|  | 3518 | 273 |  |
-|`file_str_detect_lsd.detect_lsd/0`|  | 12532 | 926|  |
-|`file_str_detect_lsd.detect_lsd/1`|  | 1242 | 11105 |  |
-
+| Name | Result | Details|
+|---|---|---|
+| i5-3320M @ 2.6GHz|721| Intel Core/CPU only|
+| GT2 (16CU,1GHz) | 1280 | GPU only from i5-3320M|
+| GF1050 (5CU, 1.455GHz) | 6632 | GeForce 1050/2GB/external|
+| GF1050+GT2 | 8012 | GPU from above |
+| CPI+GF1050+GT2 | 8224 | CPU+GPU from above|
 
 [back to top](#toc)

@@ -134,7 +134,11 @@ Since rpi Compute have only 4GB of EMMC memory, it's necessary to move some data
  - looks like impossible to move `/usr/lib` even it should be possible according Unix standard ;) 
  
 #### Qt
- - [Cross compile Qt](https://wiki.qt.io/RaspberryPi2EGLFS)
+ 
+[Qt 5.12](http://www.tal.org/tutorials/building-qt-512-raspberry-pi)
+
+
+- [Cross compile Qt](https://wiki.qt.io/RaspberryPi2EGLFS)
  
 For every version of Raspberry Pi, you have to change `-device`:
 

@@ -19,7 +19,7 @@ Use `raspbian-stretch-lite` image to fit to 4GB of rpi compute
 Flash CM's EMMC as described in [official guide](https://www.raspberrypi.org/documentation/hardware/computemodule/cm-emmc-flashing.md) :
 
 - `sudo ./rpiboot`
-- `sudo dd if=2018-06-27-raspbian-stretch-lite.img of=/dev/sdc bs=4MiB status=progress oflag=sync`
+- `sudo dd if=2018-11-13-raspbian-stretch-lite.img of=/dev/mmcblk0 bs=4MiB status=progress oflag=sync`
 
 Config:
 
@@ -77,6 +77,9 @@ VNC:
 
 get images: `raspivid -cs 0 -o image0.jpg` for 1st camera and  `raspivid -cs 1 -o image1.jpg` for second
 
+OmniVision OV5647 - 2592 × 1944, FOV  160
+`raspistill -3d sbs -w 1280 -h 480 -o 1.jpg`
+
 [stereo pi IO](http://www.stereopi.com/)
 
 [perfect doc for cameras](https://picamera.readthedocs.io/en/latest/fov.html)
@@ -86,7 +89,7 @@ get images: `raspivid -cs 0 -o image0.jpg` for 1st camera and  `raspivid -cs 1 -
 
 #### Video4Linux
 
-At 2018.06 build Video4Linux driver is already included, but not loaded by default, so `bcm2835-v4l2` need to be added to /ect/modules. `v4l2-ctl --list-formats` output a list of supported formats. Additional info can be found at [rpi forum](https://www.raspberrypi.org/forums/viewtopic.php?t=62364)
+At 2018.06 build Video4Linux driver is already included, but not loaded by default, so `bcm2835-v4l2` need to be added to `/ect/modules`. `v4l2-ctl --list-formats` output a list of supported formats. Additional info can be found at [rpi forum](https://www.raspberrypi.org/forums/viewtopic.php?t=62364)
 
 ### OpenCL for VC4
 
@@ -102,11 +105,19 @@ than restart
 - `sudo /etc/init.d/dphys-swapfile stop`
 - `sudo /etc/init.d/dphys-swapfile start`
 
+#### add sources
+
+`sudo nano /etc/apt/sources.list` and uncomment `deb-src`
+
 #### ssh without password
 
 [ssh login without passwordcgparted](https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md)
 
-#### Partitions
+-  on pi: `ssh-keygen`
+-  on PC: `ssh-copy-id pi@rpiIP`
+
+
+#### Partitions/ComputeModule only
 Since rpi Compute have only 4GB of EMMC memory, it's necessary to move some data to SD/USBFlash drive, like:
 
 `/dev/sda1 /mnt/32GB ext4 defaults 0 1`

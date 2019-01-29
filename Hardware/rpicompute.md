@@ -21,6 +21,9 @@ Flash CM's EMMC as described in [official guide](https://www.raspberrypi.org/doc
 - `sudo ./rpiboot`
 - `sudo dd if=2018-11-13-raspbian-stretch-lite.img of=/dev/mmcblk0 bs=4MiB status=progress oflag=sync`
 
+To make a `*.img` from sdcard need to decrease partition size to aprox 125% of used space(unmount partiton, than `sudo gparted /dev/mmcblk0`) and than make opposite `dd` with `bs=1MiB count=2048` for 2GB image.
+
+ 
 Config:
 
 - default user: `pi`
@@ -86,6 +89,11 @@ OmniVision OV5647 - 2592 × 1944, FOV  160
 
 [1k RPI cam](https://www.raspberrypi.org/forums/viewtopic.php?t=212518)
 
+| #mode | resolution | status|
+|---|---|---|
+|1|1920x1080|ok, part sensor|
+|2|2592x1944|ok|
+
 
 #### Video4Linux
 
@@ -137,6 +145,9 @@ Since rpi Compute have only 4GB of EMMC memory, it's necessary to move some data
  
 [Qt 5.12](http://www.tal.org/tutorials/building-qt-512-raspberry-pi)
 
+**Memory split** should be set to **64/128 MB** to avoid EGLFS driver crash:
+```
+EGL Error : Could not create the egl surface: error = 0x3003```
 
 - [Cross compile Qt](https://wiki.qt.io/RaspberryPi2EGLFS)
  
@@ -185,7 +196,7 @@ cd qt
         -skip qtwebview \
         -skip qtcanvas3d \
         -skip qtdatavis3d \
-	    -skip qtvirtualkeyboard
+	       -skip qtvirtualkeyboard
 ```
 
  - [Configure QtCreator](https://www.ics.com/blog/configuring-qt-creator-raspberry-pi)
@@ -198,7 +209,7 @@ Gstreamer and most of the dev libs already installed with Qt from above
 
 `cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules -D ENABLE_NEON=ON -D ENABLE_VFPV3=ON -D BUILD_TESTS=OFF -D BUILD_EXAMPLES=OFF -D WITHQT=ON ..`
 
-Note`WITH_OPENGL=ON`
+Note `WITH_OPENGL=ON` will try to use Desktop GL
 
 #### POCL
 

@@ -121,7 +121,7 @@ than restart
 
 [ssh login without passwordcgparted](https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md)
 
--  on pi: `ssh-keygen`
+-  on pi: `ssh-keygen -t rsa -b 4096 -C "ayaromenok@gmail.com"`
 -  on PC: `ssh-copy-id pi@rpiIP`
 
 

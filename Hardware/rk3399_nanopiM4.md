@@ -5,6 +5,7 @@ rk3399_nanopiM4
 	- [Cores](#cores)
 	- [GPU](#gpu)
 	- [make SD card](#makeSDcard)
+	- [mcam400](#mcam400)
 - [Software](#soft)
  	- [default software](#defaultSoft)
 	- [swap](#swap)
@@ -45,6 +46,14 @@ set predefined freq fro bosth CPU/CPU: 1200MHz/600MHz
 can ba added to `/etc/rc.local`
 
 ```
+
+# Get superuser privileges
+if [ $EUID != 0 ]; then
+    echo "This script requires superuser privileges:"
+    sudo "$0" "$@"
+    exit $?
+fi
+
 echo "CPU-A53"
 echo "performance" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
 echo 1200000 > /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
@@ -72,6 +81,20 @@ scp mgddaemon  pi@192.168.8.121:/home/pi
 [Ubuntu18 docker](https://github.com/friendlyarm/friendlyelec-ubuntu18-docker)
 
 [https://github.com/friendlyarm/sd-fuse_rk3399](https://github.com/friendlyarm/sd-fuse_rk3399)
+
+[back to top](#toc)
+
+### MCAM400 <a name="cam400"></a>
+[Official page](https://www.friendlyarm.com/index.php?route=product/product&path=78&product_id=247)
+[OV 4689 datasheet](https://www.ovt.com/download/sensorpdf/136/OmniVision_OV4689.pdf)
+
+resolutions:
+- 2688 x 1520: 90 fps
+- 1920 x 1080: 120 fps
+- 1280 x 720: 180 fps
+- 672 x 380: 330 fps
+
+works only 2688 x 1520 at aprox 12fps
 
 [back to top](#toc)
 
@@ -142,10 +165,17 @@ No accelerated drivers provided - need to install:
  - Open GL ES2 not working for now
  - for GL/GLES2/CLinfo `sudo apt install clinfo mesa-utils mesa-utils-extra` 
  - Qt5.9.5 `sudo apt install build-essential qt5-default qt5-doc qtbase5-examples qt5-doc-html qtbase5-doc-html` 
-
+ 
 kernel sources can be installed from armbian-config 
 
-OpenCL stillhave issues under OpenCV/perf test
+OpenCL still have issues under OpenCV/perf test
+
+[RockCHip SDK](http://opensource.rock-chips.com/wiki_Source)
+[V4L2 info](http://trac.gateworks.com/wiki/linux/v4l2)
+https://github.com/96boards/website/blob/master/_posts/2018/11/2018-11-22-interfacing-camera-with-rock960.md
+http://opensource.rock-chips.com/wiki_Rockchip-isp1
+https://github.com/96boards/documentation/blob/master/consumer/rock/guides/camera-module.md
+
 [back to top](#toc)
 
 ### avafinger Linux
@@ -154,7 +184,7 @@ Minimal linux [https://github.com/avafinger/nanopi-m4-ubuntu-base-minimal] with 
 
 [back to top](#toc)
 
-### kernel <a name=""kernel"></a>
+### kernel <a name="kernel></a>
 
 [details - sd-fuse_rk3399](https://github.com/friendlyarm/sd-fuse_rk3399)
  

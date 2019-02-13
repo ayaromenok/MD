@@ -4,6 +4,7 @@ Sensors
 ### TOC
 
 	- [IR Cam AMG8833](#amg8833)
+	- [WiringPI](#wiringPi)
 
 
 ### IR Cam AMG88xx <a name ="amg8833"></a>
@@ -14,3 +15,7 @@ Sensors
 
 [back to top](#toc)
 
+
+### WiringPI <a name="wiringPi"></a>
+
+[WiringPi with RaspebrryPi 3A](https://github.com/ayaromenok/WiringPi) support required to work with [AMG8833](#amg8833) sensor

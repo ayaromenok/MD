@@ -230,3 +230,7 @@ LIST OF DEVICES:
     Name:   pthread-cortex-a53
  Version:   OpenCL 1.2 pocl HSTR: pthread-armv6-unknown-linux-gnueabihf-cortex-a53
 ```
+
+### CNC
+
+[laser4web](https://laserweb.yurl.ch/documentation/installation/36-install-raspberry-pi)

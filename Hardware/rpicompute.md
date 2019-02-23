@@ -95,6 +95,8 @@ OmniVision OV5647 - 2592 × 1944, FOV  160
 |2|2592x1944|ok|
 
 
+[UV4L - remote camera acceess](https://www.linux-projects.org/uv4l/installation/)
+
 #### Video4Linux
 
 At 2018.06 build Video4Linux driver is already included, but not loaded by default, so `bcm2835-v4l2` need to be added to `/ect/modules`. `v4l2-ctl --list-formats` output a list of supported formats. Additional info can be found at [rpi forum](https://www.raspberrypi.org/forums/viewtopic.php?t=62364)
@@ -147,7 +149,8 @@ Since rpi Compute have only 4GB of EMMC memory, it's necessary to move some data
 
 **Memory split** should be set to **64/128 MB** to avoid EGLFS driver crash:
 ```
-EGL Error : Could not create the egl surface: error = 0x3003```
+EGL Error : Could not create the egl surface: error = 0x3003
+```
 
 - [Cross compile Qt](https://wiki.qt.io/RaspberryPi2EGLFS)
  

@@ -236,4 +236,8 @@ LIST OF DEVICES:
 
 ### CNC
 
-[laser4web](https://laserweb.yurl.ch/documentation/installation/36-install-raspberry-pi)
+[laser4web](https://github.com/LaserWeb/LaserWeb4/wiki/1.4-Installation-on-RaspberryPi)
+
+`sudo systemctl status lw.comm-server`
+
+`start|stop|restart`

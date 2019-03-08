@@ -14,6 +14,8 @@ rk3399_nanopiM4
 
 ## Hardware <a name="hard"></a>
 
+kernel 5.1 merge for [nano pi T/M 4 support](https://github.com/torvalds/linux/commit/6ad63dec9c2c80710896edd1996e56c54a230870)
+
 MIPI-CSI - only [own 13.2MP cam](https://www.friendlyarm.com/index.php?route=product/product&path=78&product_id=228) - since connector is 30x0.5mm - [see in detail](http://wiki.friendlyarm.com/wiki/index.php/NanoPi_M4#Layout)
 
 [back to top](#toc)

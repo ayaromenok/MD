@@ -79,6 +79,11 @@ sources:
 
 ### GStreamer usage <a name="gstreamer usage"></a>
 
+Asus Thinker board wiki provide complete info for:
+
+- old [isp10](https://tinkerboarding.co.uk/wiki/index.php/CSI-camera-2.0.7) - with 2.0.7 firmware or below
+- new [isp1](https://tinkerboarding.co.uk/wiki/index.php/CSI-camera-2.0.8) - with 2.0.8 firmware or above
+
 [back to top](#toc)
 
 

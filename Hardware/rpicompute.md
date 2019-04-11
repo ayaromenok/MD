@@ -1,9 +1,24 @@
 rpicompute
 ========================
 
-## Install
+### TOC
+- [install](#install)
+	- [Flash RPi module](#flashmodule)
+	- [Dual Camera](#dualcam)
+		- [Video4Linux](#Videlo4Linux)
+- [Software](#software)
+	- [Qt](#qt)
+	- [OpenCV](#opencv)
+	- [POCL](#pocl)
+	- [Other OS](#otheros)
+		- [Motion OS](#motionos)
+		- [Ubuntu Mate](#ubuntumate)
+- [CNC server](#cnc)
 
-### Flash module
+
+### Install <a name ="install"></a>
+
+#### Flash module <a name ="flashmodule"></a>
 on I/O module:
  
 - Pull the jumpers of USB SLAVE 1/2/3/4 SELECTION (you need to pull two jumpers
@@ -67,8 +82,9 @@ VNC:
 
 `sudo raspi-config > Interface Option > VNC:yes`
 
+[back to top](#toc)
 
-### dual Cam
+#### dual Cam <a name ="dualcam"></a>
 - `sudo raspi-config` and enable the camera;
 - `wget https://www.raspberrypi.org/documentation/hardware/computemodule/dt-blob-dualcam.dts`
 - `dtc -I dts -O dtb -o dt-blob-dualcam.dtb dt-blob-dualcam.dts`
@@ -97,16 +113,22 @@ OmniVision OV5647 - 2592 × 1944, FOV  160
 
 [UV4L - remote camera acceess](https://www.linux-projects.org/uv4l/installation/)
 
-#### Video4Linux
+[back to top](#toc)
+
+##### Video4Linux <a name ="Video4Linux"></a>
 
 At 2018.06 build Video4Linux driver is already included, but not loaded by default, so `bcm2835-v4l2` need to be added to `/ect/modules`. `v4l2-ctl --list-formats` output a list of supported formats. Additional info can be found at [rpi forum](https://www.raspberrypi.org/forums/viewtopic.php?t=62364)
 
-### OpenCL for VC4
+[back to top](#toc)
+
+#### OpenCL for VC4<a name ="opencl"></a>
 
 [attempt to implement OpenCL 1.2 for pri](https://github.com/doe300/VC4CL), [part 2](https://github.com/doe300/VC4C)
 
+[back to top](#toc)
 
-### Software
+### Software<a name ="software"></a>
+
 #### Swap file size
 open `sudo nano /etc/dphys-swapfile`, than increase to 512MB `CONF_SWAPSIZE=512`
 
@@ -142,8 +164,10 @@ Since rpi Compute have only 4GB of EMMC memory, it's necessary to move some data
 ```
 
  - looks like impossible to move `/usr/lib` even it should be possible according Unix standard ;) 
+
+[back to top](#toc)
  
-#### Qt
+#### Qt <a name ="qt"></a>
  
 [Qt 5.12](http://www.tal.org/tutorials/building-qt-512-raspberry-pi)
 
@@ -204,7 +228,10 @@ cd qt
 
  - [Configure QtCreator](https://www.ics.com/blog/configuring-qt-creator-raspberry-pi)
 
-#### OpenCV
+[back to top](#toc)
+
+
+#### OpenCV  <a name ="opencv"></a>
 
 `sudo apt-get install build-essential cmake pkg-config libjpeg-dev libpng-dev libtiff-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev`
 
@@ -214,7 +241,7 @@ Gstreamer and most of the dev libs already installed with Qt from above
 
 Note `WITH_OPENGL=ON` will try to use Desktop GL
 
-#### POCL
+#### POCL <a name ="pocl"></a>
 
 `sudo apt install libhwloc-dev ocl-icd-opencl-dev libglew-dev zlib1g-dev libedit-dev`
 
@@ -233,11 +260,33 @@ LIST OF DEVICES:
     Name:   pthread-cortex-a53
  Version:   OpenCL 1.2 pocl HSTR: pthread-armv6-unknown-linux-gnueabihf-cortex-a53
 ```
+[back to top](#toc)
 
-### CNC
+#### Other OS <a name="otheros"></a>
+
+##### MotionEYE OS <a name="motioneyeos"></a>
+
+[Motion EYE OS](https://github.com/ccrisan/motioneyeos)  - use RPi3 as a Security Camera. both CSI and USB cams supported
+
+[back to top](#toc)
+
+##### Ubuntu Mate  <a name="ubuntumate"></a>
+
+[18.04 - 32 or 64 bit](https://ubuntu-mate.org/download/) 
+ - can't be installed directly to RPi3A due to low memory issue, but can be run when already installed on RPi3B.
+ - 64bit don't have any h\w acceleration :()
+
+[back to top](#toc)
+
+
+### CNC <a name ="cnc"></a>
 
 [laser4web](https://github.com/LaserWeb/LaserWeb4/wiki/1.4-Installation-on-RaspberryPi)
 
 `sudo systemctl status lw.comm-server`
 
 `start|stop|restart`
+
+[back to top](#toc)
+
+

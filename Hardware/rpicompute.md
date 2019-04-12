@@ -47,6 +47,20 @@ Config:
 - set localization option to en.us-utf8 by `sudo raspi-config`
 - set correct timezone`dpkg-reconfigure tzdata`
 
+wifi as perconfig:
+
+- create `wpa_supplicant.conf` at `/boot`;
+- add
+```	
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+network={
+    ssid="YOUR_NETWORK_NAME"
+    psk="YOUR_PASSWORD"
+    key_mgmt=WPA-PSK
+}
+```
+- add `ssh` empty file to `/boot` to enable SSH server by default
+
 installing GUI brake broadcom drivers;
 [installing GUI](https://www.raspberrypi.org/forums/viewtopic.php?p=890408#p890408), including Mate
 

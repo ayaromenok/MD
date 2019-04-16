@@ -125,6 +125,10 @@ OmniVision OV5647 - 2592 × 1944, FOV  160
 |2|2592x1944|ok|
 
 
+IRCamera mode(for real cams):
+sudo nano /boot/config.txt
+disable_camera_led=1 or 0
+
 [UV4L - remote camera acceess](https://www.linux-projects.org/uv4l/installation/)
 
 [back to top](#toc)

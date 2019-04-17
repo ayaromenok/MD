@@ -124,10 +124,15 @@ OmniVision OV5647 - 2592 × 1944, FOV  160
 |1|1920x1080|ok, part sensor|
 |2|2592x1944|ok|
 
+##### NoIR Cams
 
 IRCamera mode(for real cams):
-sudo nano /boot/config.txt
-disable_camera_led=1 or 0
+`sudo nano /boot/config.txt`
+`disable_camera_led=1 or 0`
+
+[Examples for NoIR Cam's 1.3 and 2.x](https://raspi.tv/2016/new-and-old-raspberry-pi-camera-comparison-shots-1-3-2-1-noir)
+
+##### Remote accecs
 
 [UV4L - remote camera acceess](https://www.linux-projects.org/uv4l/installation/)
 

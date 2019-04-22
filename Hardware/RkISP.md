@@ -48,9 +48,11 @@ Different cameras can supporterted by `ISP`, but this depends from board develop
 
 
 ### rkisp1 ("new") <a name="rkisp1"></a>
-- [rkisp1 wiki ](http://opensource.rock-chips.com/wiki_Rockchip-isp1)
-- [gstreamer isp1](https://github.com/rockchip-linux/camera_engine_rkisp)
+- [rkisp1 wiki ](http://opensource.rock-chips.com/wiki_Rockchip-isp1);
+- [gstreamer isp1](https://github.com/rockchip-linux/camera_engine_rkisp);
 - [gstreamer - rkximage](https://github.com/rockchip-linux/gstreamer-rockchip-extra) - to display via script under `X11/gst-launch-1.0`, not needed for OpenCV;
+- `rkisp1` present in Asus tinkerboard 2.0.8+ firmware and as a patches in Armbian kernel for tinkerboardl;
+
 [back to top](#toc)
 
 

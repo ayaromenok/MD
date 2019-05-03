@@ -34,7 +34,8 @@ Use `raspbian-stretch-lite` image to fit to 4GB of rpi compute
 Flash CM's EMMC as described in [official guide](https://www.raspberrypi.org/documentation/hardware/computemodule/cm-emmc-flashing.md) :
 
 - `sudo ./rpiboot`
-- `sudo dd if=2018-11-13-raspbian-stretch-lite.img of=/dev/mmcblk0 bs=4MiB status=progress oflag=sync`
+- `sudo dd if=2019-04-08-raspbian-stretch-lite.img of=/dev/mmcblk0 bs=4MiB status=progress oflag=sync` for sc-card or `of=/dev/sdc` for ComputeModule.
+- Raspbiand Desktop since 2019-04-08 also fit ot 4GB ComputeModule;
 
 To make a `*.img` from sdcard need to decrease partition size to aprox 125% of used space(unmount partiton, than `sudo gparted /dev/mmcblk0`) and than make opposite `dd` with `bs=1MiB count=2048` for 2GB image.
 
@@ -51,7 +52,8 @@ wifi as perconfig:
 
 - create `wpa_supplicant.conf` at `/boot`;
 - add
-```	
+
+```
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 network={
     ssid="YOUR_NETWORK_NAME"
@@ -105,13 +107,19 @@ VNC:
 - `sudo cp dt-blob-dualcam.dtb /boot/dt-blob.bin`
 - `sudo reboot` to load blobs;
 -  correct output is: 
-`vcgencmd get_camera`
+`vcgencmd get_camera` : 
 `supported=2 detected=2`
 
 get images: `raspivid -cs 0 -o image0.jpg` for 1st camera and  `raspivid -cs 1 -o image1.jpg` for second
 
 OmniVision OV5647 - 2592 × 1944, FOV  160
 `raspistill -3d sbs -w 1280 -h 480 -o 1.jpg`
+
+##### TimeLapse
+
+[TimeLapse with raspicam](https://www.raspberrypi.org/documentation/usage/camera/raspicam/timelapse.mm)
+
+Note: raspicam can't make a long (100+) timelapse due to stability issue, so it's a good idea to use `crontab -e` together with short timelapses
 
 [stereo pi IO](http://www.stereopi.com/)
 
@@ -140,7 +148,8 @@ IRCamera mode(for real cams):
 
 ##### Video4Linux <a name ="Video4Linux"></a>
 
-At 2018.06 build Video4Linux driver is already included, but not loaded by default, so `bcm2835-v4l2` need to be added to `/ect/modules`. `v4l2-ctl --list-formats` output a list of supported formats. Additional info can be found at [rpi forum](https://www.raspberrypi.org/forums/viewtopic.php?t=62364)
+
+At 2018.06 build Video4Linux driver is already included, but not loaded by default, so `bcm2835-v4l2` need to be added to `/etc/modules`. `v4l2-ctl --list-formats` output a list of supported formats. Additional info can be found at [rpi forum](https://www.raspberrypi.org/forums/viewtopic.php?t=62364)
 
 [back to top](#toc)
 

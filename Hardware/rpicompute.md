@@ -1,7 +1,7 @@
 rpicompute
 ========================
 
-### TOC
+### TOC<a name ="toc"></a>
 - [install](#install)
 	- [Flash RPi module](#flashmodule)
 	- [Dual Camera](#dualcam)

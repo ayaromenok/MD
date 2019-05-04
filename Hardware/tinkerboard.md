@@ -16,6 +16,8 @@ Tinker Board
 user: `linaro`
 pass: `linaro`
 
+config: `tinker-config` - similar to raspi-config. need to select camera(`v1.3` or `v2.1`) here
+
 camera config: `~/camera/xml`
 
 [back to top](#toc)

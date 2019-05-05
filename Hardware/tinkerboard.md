@@ -3,6 +3,7 @@ Tinker Board
 ### TOC<a name ="toc"></a>
 - [install](#install)
 	- [asus os/debian stretch](#asusos)
+	- [armbian](#)
 - [software](#software)
 - [hardware](#hardware)
 	- [camera](#camera)
@@ -12,7 +13,7 @@ Tinker Board
 
 #### Asus OS/Debian Strech <a name ="asusos"></a>
 
-`dd if=20181023-tinker-board-linaro-stretch-alip-v2.0.8.img of=/dev/mmcblk0 bs=4MiB status=progress oflag=sync`
+`sudo dd if=20181023-tinker-board-linaro-stretch-alip-v2.0.8.img of=/dev/mmcblk0 bs=4MiB status=progress oflag=sync`
 
 user: `linaro`
 pass: `linaro`
@@ -20,6 +21,21 @@ pass: `linaro`
 config: `tinker-config` - similar to raspi-config. need to select camera(`v1.3` or `v2.1`) here
 
 camera config: `~/camera/xml`
+
+[back to top](#toc)
+
+#### Ambian<a name="armbian"></a>
+
+- Armbian\Desktop **default**  use std 4.4 kernel
+- Armbian\Desktop  **next**  use 4.19.x kernel
+
+`sudo dd if=Armbian_5.77_Tinkerboard_Ubuntu_bionic_next_4.19.33_desktop.img of=/dev/mmcblk0 bs=4MiB status=progress oflag=sync
+`
+
+user: `root``
+pass: `1234`
+
+config: `armbian-config`
 
 [back to top](#toc)
 

@@ -6,6 +6,7 @@ Tinker Board
 - [software](#software)
 - [hardware](#hardware)
 	- [camera](#camera)
+	- [cpu/gpu temperature](#cpugputemp)
 
 ### Install <a name ="install"></a>
 
@@ -24,6 +25,8 @@ camera config: `~/camera/xml`
 
 ### Software <a name ="software"></a>
 
+[perfect wiki](https://tinkerboarding.co.uk/wiki/index.php/Software)
+
 [back to top](#toc)
 
 ### Hardware <a name ="hardware"></a>
@@ -36,3 +39,15 @@ Asus Thinker board wiki provide complete info for:
 
 [back to top](#toc)
 
+#### CPU/GPU Tempeature <a name ="cpugputemp"></a>
+
+```
+#!/bin/bash
+celsius1=$(cat /sys/class/thermal/thermal_zone0/temp | sed 's/.\{3\}$/.&/')
+celsius2=$(cat /sys/class/thermal/thermal_zone1/temp | sed 's/.\{3\}$/.&/')
+echo "   CPU/GPU temperature"
+echo "   ${celsius1} °C"
+echo "   ${celsius2} °C"
+```
+
+[back to top](#toc)

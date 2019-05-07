@@ -6,9 +6,13 @@ RkISP
 - [rkisp10 "old"](#rkisp10)
 - [rkisp1 "new"](#rkisp1)
 - [devices info](#devinfo)
-- [gstreamer plugin info](#gsreamerinfo)
-- [usage with gstreamer](#gstreamerusage)
+	- [check isp1 status](#check_status)
+- [gstreamer plugin info](#gsreamerInfo)
+- [usage with gstreamer](#gstreamerUsage)
 - [Linux disto for NanoPi boards status](#nanopi)
+	- [friendly elec/nanopi m4](#friendlyelec);
+	- [armbian/nanopi m4](#armbian);
+	- [asus os/tinkerboard](#asusos);
 - [Camera IQ files](#iqfiles)
 
 
@@ -73,13 +77,18 @@ sources:
 - [wiki](http://opensource.rock-chips.com/wiki_Rockchip-isp1)
 - [rk3399 pdf](http://opensource.rock-chips.com/images/6/60/Rockchip_RK3399_Datasheet_V1.6-20170301.pdf)
 
+#### Check isp1 status <a name="check_status"></a>
+
+`sudo media-ctl --print-topology``
+
+
 [back to top](#toc)
 
-### GStreamer plugin info <a name="gstreamerinfo"></a>
+### GStreamer plugin info <a name="gstreamerInfo"></a>
 
 [back to top](#toc)
 
-### GStreamer usage <a name="gstreamer usage"></a>
+### GStreamer usage <a name="gstreamerUsage"></a>
 
 Asus Thinker board wiki provide complete info for:
 
@@ -91,15 +100,19 @@ Asus Thinker board wiki provide complete info for:
 
 ### Linux disto for nanoPi boards status <a name="nanopi"></a>
 
-#### Friendly Elec core/Desktop: 
+#### Friendly Elec core/Desktop: <a name="frienlyelec"></a>
 
 - `rkisp10` - work out-of-box with 20181219 distro
 - `rkisp1` - don't work
 
-#### Armbian:
+#### Armbian/Rk3399:<a name="armbian"></a>
 
 - `rkisp10` - work after kernel\gstreamer compilation, but without camera white balance and other parameters
-- `rkisp1` - don't work. but may be work on ASUS thinker board.
+- `rkisp1` - don't work on rk3399. Work on ASUS thinker board/[firefly custom kernel](http://bbs.t-firefly.com/forum.php?mod=viewthread&tid=2490&extra=).
+
+#### Asus OS:<a name="asusos"></a>
+- `rkisp10` - work in 2.0.7 OS version or early;
+- `rkisp1` - work in 2.0.8 OS version or later
 
 [back to top](#toc)
 

@@ -22,6 +22,11 @@ config: `tinker-config` - similar to raspi-config. need to select camera(`v1.3` 
 
 camera config: `~/camera/xml`
 
+kernel:
+
+- [kernel sources](https://github.com/TinkerBoard/debian_kernel)
+- [kernel config](https://github.com/TinkerBoard/debian_kernel/blob/release/arch/arm/configs/miniarm-rk3288_defconfig)
+
 [back to top](#toc)
 
 #### Ambian<a name="armbian"></a>

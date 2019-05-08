@@ -168,8 +168,7 @@ No accelerated drivers provided - need to install:
  - for GL/GLES2/CLinfo `sudo apt install clinfo mesa-utils mesa-utils-extra` 
  - Qt5.9.5 `sudo apt install build-essential qt5-default qt5-doc qtbase5-examples qt5-doc-html qtbase5-doc-html` 
  
-kernel sources can be installed from armbian-config 
-
+kernel sources can be installed from armbian-config - use friendlyarm sources. required `git pull`
 OpenCL still have issues under OpenCV/perf test
 
 [RockCHip SDK](http://opensource.rock-chips.com/wiki_Source)
@@ -188,6 +187,7 @@ Minimal linux [https://github.com/avafinger/nanopi-m4-ubuntu-base-minimal] with 
 
 ### kernel <a name="kernel></a>
 
+
 [details - sd-fuse_rk3399](https://github.com/friendlyarm/sd-fuse_rk3399)
  
 ```
@@ -195,12 +195,16 @@ sudo apt install bc liblz4-tool
 git clone https://github.com/friendlyarm/kernel-rockchip --depth 1 -b nanopi4-linux-v4.4.y kernel-rockchip
 cd kernel-rockchip
 ```
+
 in case of buil on board need to remove cross compile prefix in nanopi4linux_defconfig
 
 ```
 make ARCH=arm64 nanopi4_linux_defconfig
 make ARCH=arm64 nanopi4-images
 ```
+
+[patches to friendlyelec kernel](https://github.com/armbian/build/tree/master/patch/kernel/rk3399-default)
+required to build: `fix-sip_smc_lastlog_request.patch``
 
 
 ### OpenCV <a name ="opencv"></a>

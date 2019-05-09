@@ -13,7 +13,15 @@ RkISP
 	- [friendly elec/nanopi m4](#friendlyelec);
 	- [armbian/nanopi m4](#armbian);
 	- [asus os/tinkerboard](#asusos);
-- [Camera IQ files](#iqfiles)
+- [Cameras](#cameras) 
+	- [ov5647](#ov5647) - RPi Cam v1.3
+	- [ov4689](#ov4689) - NanoPi  Cam400 wide 16:9 cam
+	- [imx219](#imx219) - RPi Cam v 2.1
+	- [ov13850](#ov13850) NanoPI Cam13
+	- [Camera IQ files](#iqfiles)
+- [Tools](#tools)
+	- [yavta](#yavta)
+- [ToDo](#todo)
 
 
 ### General Info <a name ="info"></a>
@@ -62,16 +70,27 @@ Different cameras can supporterted by `ISP`, but this depends from board develop
 
 ### Device info <a name="devinfo"></a>
 
-Typically camera device at rkisp looks like different `/dev/video*` devices:
+Typically camera device at rkisp looks like different `/dev/video*` devices. position of pathes is different
 
-| name |  |  |
+
+| Path | TinkerBoard | NanoPi M4|
 |---|---|---|
-| /dev/video0 | 4416x3312 | Main scaler path, YUV only |
-| /dev/video1 | 1920x1080 | Self scaler path, YUV or RGB888, 666, 565 (need to test!) |
-| /dev/video2 |  | statistic  |
-| /dev/video3 |  | config for AWV, etc |
-| /dev/video4-7 |  | 2nd CSI camera |
+| Main scaler path, YUV only | /dev/video1 | /dev/video2 |
+| Self scaler path, YUV or RGB888 | /dev/video0 | /dev/video0|
+| statistic  | /dev/video2| ?|
+| config for AWV, etc | /dev/video3|? |
 
+Cam2 use /dev/video4-/dev/video7
+
+need to test config dsi files
+
+
+branch stable-4.4-rk3399-linux-20190402 looks like include `isp1` and `dual camera`
+https://github.com/FireflyTeam/kernel/blob/stable-4.4-rk3399-linux-20190402/arch/arm64/boot/dts/rockchip/rk3399-firefly-port.dtsi
+https://github.com/FireflyTeam/kernel/blob/stable-4.4-rk3399-linux-20190402/arch/arm64/boot/dts/rockchip/rk3399-firefly-linux.dts 
+
+patches:https://github.com/FireflyTeam/kernel/commit/d6e54874c782f12da8391401ceb6491ab62a18f1#diff-66557344644c9e2f3abe605c75d3ff28
+https://github.com/FireflyTeam/kernel/commit/a0ea05d352c46f7b21ab8227b1e43306d017e333
 sources:
 
 - [wiki](http://opensource.rock-chips.com/wiki_Rockchip-isp1)
@@ -79,7 +98,8 @@ sources:
 
 #### Check isp1 status <a name="check_status"></a>
 
-`sudo media-ctl --print-topology``
+`sudo media-ctl --print-topology`
+`v4l2-compliance`
 
 
 [back to top](#toc)
@@ -116,8 +136,40 @@ Asus Thinker board wiki provide complete info for:
 
 [back to top](#toc)
 
+### Cameras<a name="#cameras"></a>
 
-### Camera IQ files <a name="#iqfiles"></a>
+#### ov5647: RPi Cam v1.3<a name="#ov5647"></a>
+
+[datasheet](https://cdn.sparkfun.com/datasheets/Dev/RaspberryPi/ov5647_full.pdf)
+
+lens size: 1/4
+output 8/10bit RAW
+
+| resolution | fps | rpi fps | rpi mode |
+|---|---|---|---|
+| 2592x1944 | 15 | 15 | 2 |
+| 1920x1080 | 30 | 30 | 1, crop |
+| 1280x960| 45 | 42 | 4 |
+| 1280x720 | 60 | 49 | 5 |
+| 640x480 | 90 |  90| 7 |
+| 320x240 | 120 |  - | - |
+
+
+[back to top](#toc)
+
+#### ov4689: NanoPi  Cam400 wide 16:9 cam<a name="ov4689"></a>
+
+[back to top](#toc)
+
+#### imx219: RPi Cam v 2.1<a name="imx219"></a>
+
+[back to top](#toc)
+
+#### ov13850: NanoPI Cam13<a name="#ov13850"></a>
+
+[back to top](#toc)
+
+#### Camera IQ files <a name="#iqfiles"></a>
 
 [link to all IQ's](https://github.com/rockchip-linux/camera_engine_rkisp/tree/master/iqfiles)
 
@@ -136,6 +188,22 @@ Asus Thinker board wiki provide complete info for:
 | SC031GS |  |  |
 
 
+[back to top](#toc)
+
+### Tools<a name="#tools"></a>
+
+#### Yet Another V4L2 Test Application<a name="#yavta"></a>
+
+[yavta](git://git.ideasonboard.org/yavta.git)
+
+`./yavta --list-controls /dev/video0``
+
 
 [back to top](#toc)
 
+
+### ToDo<a name="#todo"></a>
+
+firefly Rk3399 woks with **isp1** /dualcamera, and kernel looks similar, so 
+
+[back to top](#toc)

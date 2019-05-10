@@ -84,6 +84,8 @@ Cam2 use /dev/video4-/dev/video7
 
 need to test config dsi files
 
+/kernel-rockchip/arch/arm64/boot/dts/rockchip/
+M4: rk3399-nanopi4-rev01.dts
 
 branch stable-4.4-rk3399-linux-20190402 looks like include `isp1` and `dual camera`
 https://github.com/FireflyTeam/kernel/blob/stable-4.4-rk3399-linux-20190402/arch/arm64/boot/dts/rockchip/rk3399-firefly-port.dtsi
@@ -91,6 +93,13 @@ https://github.com/FireflyTeam/kernel/blob/stable-4.4-rk3399-linux-20190402/arch
 
 patches:https://github.com/FireflyTeam/kernel/commit/d6e54874c782f12da8391401ceb6491ab62a18f1#diff-66557344644c9e2f3abe605c75d3ff28
 https://github.com/FireflyTeam/kernel/commit/a0ea05d352c46f7b21ab8227b1e43306d017e333
+
+[tinkerbaord rkisp1](https://github.com/TinkerBoard/debian_kernel/blob/develop/arch/arm/boot/dts/rk3288-rkisp1.dtsi)
+
+`sudo i2cdetect -y -r 2` : both cameras @36
+
+`/sdk/src/gstreamer/camera_engine_rkisp/rkisp/ia-engine/cam_ia_api/cam_ia10_engine.cpp:303` - `AWB` disabled
+
 sources:
 
 - [wiki](http://opensource.rock-chips.com/wiki_Rockchip-isp1)
@@ -178,14 +187,8 @@ output 8/10bit RAW
 | IMX327  |  | 1925x1097 |
 | OV4689  | nanopi cam400 /30x0.5| 16:9  |
 | OV13850 | NanoPi cam13 / 30x0.5 | 4:3  |
-| OV2685 |  |  |
-| OV2718 |  |  |
-| OV2735 |  |  |
-| OV5696 |  |  |
-| OV7251 |  |  |
-| OV7750 |  |  |
-| GC2355 |  |  |
-| SC031GS |  |  |
+
+and many more
 
 
 [back to top](#toc)

@@ -96,6 +96,33 @@ https://github.com/FireflyTeam/kernel/commit/a0ea05d352c46f7b21ab8227b1e43306d01
 
 [tinkerbaord rkisp1](https://github.com/TinkerBoard/debian_kernel/blob/develop/arch/arm/boot/dts/rk3288-rkisp1.dtsi)
 
+correct log for rkisp1:
+
+```
+[    1.996482] iommu: Adding device ff910000.isp to group 0
+[    3.102983] rkisp1: Async subdev notifier completed
+```
+
+error: iommu don't add ff910000.isp/ff920000.isp
+log for cif_isp:
+
+```
+[    1.487261] iommu: Adding device ff910000.cif_isp to group 4
+[    1.487366] iommu: Adding device ff920000.cif_isp to group 5
+[    3.023723] cif_isp10_v4l2_drv_probe: CIF ISP10 driver version: v0.2.1
+[    3.024455] cif_isp10_pltfrm_dev_init(886) ERR: could not get default pinstate
+[    3.025155] cif_isp10_pltfrm_dev_init WARN: could not get pins_sleep pinstate
+[    3.025823] cif_isp10_pltfrm_dev_init WARN: could not get pins_inactive pinstate
+[    3.061788] cif_isp10_img_src_v4l2_i2c_subdev_to_img_src(59) ERR: failed with error -6
+[    3.062531] cif_isp10_img_src_to_img_src(70) ERR: to_img_src failed!
+[    3.063107] cif_isp10_img_src_to_img_src(78) ERR: failed with error -14
+[    3.099459] cif_isp10_pltfrm_get_img_src_device: rk-ov4689 attach to cif isp10 img_src_array[0]
+[    3.100780] cif_isp10_v4l2_register_video_device: video device video-1.0 (rkisp10_selfpath) successfully registered
+[    3.102907] cif_isp10_v4l2_register_video_device: video device video-1.2 (rkisp10_mainpath) successfully registered
+[    3.103877] cif_isp10_v4l2_register_video_device: video device video-1.3 (rkisp10_dmapath) successfully registered
+and same to second isp
+```
+
 `sudo i2cdetect -y -r 2` : both cameras @36
 
 `/sdk/src/gstreamer/camera_engine_rkisp/rkisp/ia-engine/cam_ia_api/cam_ia10_engine.cpp:303` - `AWB` disabled

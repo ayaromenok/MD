@@ -131,6 +131,7 @@ Note: raspicam can't make a long (100+) timelapse due to stability issue, so it'
 |---|---|---|
 |1|1920x1080|ok, part sensor|
 |2|2592x1944|ok|
+[full sensor info](https://picamera.readthedocs.io/en/release-1.13/fov.html#sensor-modes)
 
 ##### NoIR Cams
 
@@ -307,6 +308,7 @@ LIST OF DEVICES:
 [18.04 - 32 or 64 bit](https://ubuntu-mate.org/download/) 
  - can't be installed directly to RPi3A due to low memory issue, but can be run when already installed on RPi3B.
  - 64bit don't have any h\w acceleration :()
+ - don't recognize HDMI display for now
 
 [back to top](#toc)
 

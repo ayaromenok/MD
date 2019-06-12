@@ -167,6 +167,17 @@ At 2018.06 build Video4Linux driver is already included, but not loaded by defau
 
 [back to top](#toc)
 
+#### Oled SSD1306 0.96 Display
+
+[Great C++ lib](https://github.com/hallard/ArduiPi_OLED)
+
+to compile need to remove `-li2c` on latest Raspbian(since spring 2018)
+
+[doc for lib](http://hallard.me/adafruit-oled-display-driver-for-pi/)
+
+[back to top](#toc)
+
+
 ### Software<a name ="software"></a>
 
 #### Swap file size

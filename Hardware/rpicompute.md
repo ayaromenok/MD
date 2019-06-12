@@ -160,6 +160,13 @@ At 2018.06 build Video4Linux driver is already included, but not loaded by defau
 
 [back to top](#toc)
 
+
+#### I2C
+
+[Overclocking I2C for OLED display](https://www.raspberrypi-spy.co.uk/2018/02/change-raspberry-pi-i2c-bus-speed/)
+
+[back to top](#toc)
+
 ### Software<a name ="software"></a>
 
 #### Swap file size

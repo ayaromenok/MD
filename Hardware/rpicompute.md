@@ -175,6 +175,15 @@ to compile need to remove `-li2c` on latest Raspbian(since spring 2018)
 
 [doc for lib](http://hallard.me/adafruit-oled-display-driver-for-pi/)
 
+can be used as a frambuffer at [least since 2019.05.14](https://github.com/raspberrypi/firmware/issues/1098)
+
+[use fb1 instead of fb0](https://github.com/notro/fbtft/wiki/Framebuffer-use)
+
+`con2fbmap 1 1`
+
+`sudo dpkg-reconfigure console-setup` - to change font
+
+
 [back to top](#toc)
 
 

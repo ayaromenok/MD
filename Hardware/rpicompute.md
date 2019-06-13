@@ -177,6 +177,13 @@ to compile need to remove `-li2c` on latest Raspbian(since spring 2018)
 
 can be used as a frambuffer at [least since 2019.05.14](https://github.com/raspberrypi/firmware/issues/1098)
 
+add to /boot/config.txt 
+
+        dtoverlay=ssd1306,inverted,sequential
+        dtparam=i2c_arm=on,i2c_baudrate=1000000
+
+[more info](https://sites.google.com/site/mincepi/pi2oled)
+
 [use fb1 instead of fb0](https://github.com/notro/fbtft/wiki/Framebuffer-use)
 
 `con2fbmap 1 1`

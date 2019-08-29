@@ -1,0 +1,72 @@
+sudo media-ctl --print-topology
+Media controller API version 0.1.0
+
+Media device information
+------------------------
+driver          rkisp1
+model           rkisp1
+serial          
+bus info        
+hw revision     0x0
+driver version  0.0.0
+
+Device topology
+- entity 1: rkisp1-isp-subdev (4 pads, 5 links)
+            type V4L2 subdev subtype Unknown flags 0
+            device node name /dev/v4l-subdev0
+	pad0: Sink
+		[fmt:SBGGR10_1X10/800x600 field:none
+		 crop.bounds:(0,0)/800x600
+		 crop:(0,0)/800x600]
+		<- "rockchip-sy-mipi-dphy":1 [ENABLED]
+	pad1: Sink
+		<- "rkisp1-input-params":0 [ENABLED]
+	pad2: Source
+		[fmt:SBGGR10_1X10/800x600 field:none
+		 crop.bounds:(0,0)/800x600
+		 crop:(0,0)/800x600]
+		-> "rkisp1_selfpath":0 [ENABLED]
+		-> "rkisp1_mainpath":0 [ENABLED]
+	pad3: Source
+		-> "rkisp1-statistics":0 [ENABLED]
+
+- entity 2: rkisp1_selfpath (1 pad, 1 link)
+            type Node subtype V4L flags 0
+            device node name /dev/video0
+	pad0: Sink
+		<- "rkisp1-isp-subdev":2 [ENABLED]
+
+- entity 3: rkisp1_mainpath (1 pad, 1 link)
+            type Node subtype V4L flags 0
+            device node name /dev/video1
+	pad0: Sink
+		<- "rkisp1-isp-subdev":2 [ENABLED]
+
+- entity 4: rkisp1-statistics (1 pad, 1 link)
+            type Node subtype V4L flags 0
+            device node name /dev/video2
+	pad0: Sink
+		<- "rkisp1-isp-subdev":3 [ENABLED]
+
+- entity 5: rkisp1-input-params (1 pad, 1 link)
+            type Node subtype V4L flags 0
+            device node name /dev/video3
+	pad0: Source
+		-> "rkisp1-isp-subdev":1 [ENABLED]
+
+- entity 6: rockchip-sy-mipi-dphy (2 pads, 2 links)
+            type V4L2 subdev subtype Unknown flags 0
+            device node name /dev/v4l-subdev1
+	pad0: Sink
+		[fmt:SBGGR8_1X8/1296x972 field:none]
+		<- "ov5647 2-0036":0 [ENABLED]
+	pad1: Source
+		[fmt:SBGGR8_1X8/1296x972 field:none]
+		-> "rkisp1-isp-subdev":0 [ENABLED]
+
+- entity 7: ov5647 2-0036 (1 pad, 1 link)
+            type V4L2 subdev subtype Sensor flags 0
+            device node name /dev/v4l-subdev2
+	pad0: Source
+		[fmt:SBGGR8_1X8/1296x972 field:none]
+		-> "rockchip-sy-mipi-dphy":0 [ENABLED]

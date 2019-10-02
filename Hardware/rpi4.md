@@ -9,6 +9,10 @@
  - [Model B](https://www.raspberrypi.org/products/raspberry-pi-4-model-b)
  - [Overclocking](https://www.cnx-software.com/2019/07/26/how-to-overclock-raspberry-pi-4/)
 
+#### PCA9685 Servo
+- [C library](https://github.com/Reinbert/pca9685)
+- [AdaFruit Python lib](https://learn.adafruit.com/16-channel-pwm-servo-driver/python-circuitpython)
+
 #### Display
 	- 2.8" 320x240 ILI9341 [spec](https://www.aliexpress.com/item/32927698197.html), [usage](https://www.raspberrypi.org/forums/viewtopic.php?t=157618)
 

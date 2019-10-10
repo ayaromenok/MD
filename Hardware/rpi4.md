@@ -8,13 +8,33 @@
 ### Hardware
  - [Model B](https://www.raspberrypi.org/products/raspberry-pi-4-model-b)
  - [Overclocking](https://www.cnx-software.com/2019/07/26/how-to-overclock-raspberry-pi-4/)
+ - [Overclocking wiki](https://www.raspberrypi.org/documentation/configuration/config-txt/overclocking.md)
+- SystemInfo: `inxi -Fc0` (`sudo apt install inxi`)
+
+#### Overclocking
+```
+sudo apt update
+sudo apt dist-upgrade
+sudo rpi-update
+```
+
+than add to: `sudo nano /boot/config.txt`
+
+```
+over_voltage=6
+arm_freq=2147
+gpu_freq=750
+```
 
 #### PCA9685 Servo
 - [C library](https://github.com/Reinbert/pca9685)
 - [AdaFruit Python lib](https://learn.adafruit.com/16-channel-pwm-servo-driver/python-circuitpython)
 
 #### Display
-	- 2.8" 320x240 ILI9341 [spec](https://www.aliexpress.com/item/32927698197.html), [usage](https://www.raspberrypi.org/forums/viewtopic.php?t=157618)
+
+	- 2.8" 320x240 ILI9341 
+	- [spec](https://www.aliexpress.com/item/32927698197.html)
+	- [usage](https://www.raspberrypi.org/forums/viewtopic.php?t=157618)
 
 
 [table for another ILI9341 display](https://sudomod.com/forum/viewtopic.php?t=2312), adapted for this one

@@ -25,6 +25,7 @@ on I/O module:
 here), set the BOOT ENABLE USB SLAVE jumpers to EN position.
 - Plug the USB SLAVE port of IO Board Plus into your host PC USB. (don’t need to
 connect power adapter to the IO Board Plus )
+- run rpiboot(sudo /share/rpi/rpiboot/rpiboot) to mount CM to PC
 
 See [Compute_Module_IO_Board_PLUS_User_Manual_EN.pdf](http://copperhilltech.com/content/Compute_Module_IO_Board_PLUS_User_Manual_EN.pdf) for details;
 
@@ -35,7 +36,7 @@ Flash CM's EMMC as described in [official guide](https://www.raspberrypi.org/doc
 
 - `sudo ./rpiboot`
 - `sudo dd if=2019-04-08-raspbian-stretch-lite.img of=/dev/mmcblk0 bs=4MiB status=progress oflag=sync` for sc-card or `of=/dev/sdc` for ComputeModule.
-- Raspbiand Desktop since 2019-04-08 also fit ot 4GB ComputeModule;
+- Raspbiand Desktop since 2019-04-08 also fit ot 4GB ComputeModule; Debian 10 based Raspbian can be installed too
 
 To make a `*.img` from sdcard need to decrease partition size to aprox 125% of used space(unmount partiton, than `sudo gparted /dev/mmcblk0`) and than make opposite `dd` with `bs=1MiB count=2048` for 2GB image.
 

@@ -111,7 +111,7 @@ VNC:
 `vcgencmd get_camera` : 
 `supported=2 detected=2`
 
-get images: `raspivid -cs 0 -o image0.jpg` for 1st camera and  `raspivid -cs 1 -o image1.jpg` for second
+get images: `raspistill -cs 0 -o image0.jpg` for 1st camera and  `raspistill -cs 1 -o image1.jpg` for second
 
 OmniVision OV5647 - 2592 × 1944, FOV  160
 `raspistill -3d sbs -w 1280 -h 480 -o 1.jpg`

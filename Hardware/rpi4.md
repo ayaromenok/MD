@@ -31,8 +31,10 @@ gpu_freq=750
 - [AdaFruit Python lib](https://learn.adafruit.com/16-channel-pwm-servo-driver/python-circuitpython)
 
 #### Display
-
+	
 	- 2.8" 320x240 ILI9341 
+	- [main wiki] (http://www.lcdwiki.com/2.8inch_SPI_Module_ILI9341_SKU:MSP2807)
+	- [user manual](http://www.lcdwiki.com/res/MSP2807/2.8inch_SPI_Module_MSP2807_User_Manual_EN.pdf)
 	- [spec](https://www.aliexpress.com/item/32927698197.html)
 	- [usage](https://www.raspberrypi.org/forums/viewtopic.php?t=157618)
 

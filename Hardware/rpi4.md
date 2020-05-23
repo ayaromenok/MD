@@ -41,8 +41,12 @@ gpu_freq=750
 	https://behindthesciences.com/electronics/connecting-ili9341-SPI-TouchScreen-lcd-to-a-raspberry-pi-in-python/
 	https://github.com/BLavery/lib_tft24T
 	https://www.waveshare.com/wiki/2.8inch_RPi_LCD_(A)
-	http://www.lcdwiki.com/3.5inch_RPi_Display
+	http://www.lcdwiki.com/3.5inch_RPi_Display	
 	https://www.raspberrypi.org/forums/viewtopic.php?t=143581
+	
+	https://elinux.org/RPi_SPI
+	https://pinout.xyz/pinout/spi#
+	https://www.raspberrypi.org/forums/viewtopic.php?f=44&t=22608&p=1216154#p1216154
 
 
 [table for another ILI9341 display](https://sudomod.com/forum/viewtopic.php?t=2312), adapted for this one

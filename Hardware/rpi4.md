@@ -60,9 +60,8 @@ gpu_freq=750
 ##### Disable blanking
 Create archive /etc/X11/xorg.conf with this content:
 
-Code: Select all
-
-```Section "ServerFlags"
+```
+Section "ServerFlags"
 Option "blank time" "0"
 Option "standby time" "0"
 Option "suspend time" "0"

@@ -6,10 +6,11 @@
 
 
 ### Hardware
+
  - [Model B](https://www.raspberrypi.org/products/raspberry-pi-4-model-b)
  - [Overclocking](https://www.cnx-software.com/2019/07/26/how-to-overclock-raspberry-pi-4/)
- - [Overclocking wiki](https://www.raspberrypi.org/documentation/configuration/config-txt/overclocking.md)
-- SystemInfo: `inxi -Fc0` (`sudo apt install inxi`)
+ - [Overclocking wiki](https://www.raspberrypi.org/documentation/configuration/config-txt/overclocking.md
+	- SystemInfo: `inxi -Fc0` (`sudo apt install inxi`)
 
 #### Overclocking
 ```
@@ -32,11 +33,16 @@ gpu_freq=750
 
 #### Display
 	
-	- 2.8" 320x240 ILI9341 
+	- 2.8" 320x240 ILI9341, touch is XPT2046 
 	- [main wiki] (http://www.lcdwiki.com/2.8inch_SPI_Module_ILI9341_SKU:MSP2807)
 	- [user manual](http://www.lcdwiki.com/res/MSP2807/2.8inch_SPI_Module_MSP2807_User_Manual_EN.pdf)
 	- [spec](https://www.aliexpress.com/item/32927698197.html)
 	- [usage](https://www.raspberrypi.org/forums/viewtopic.php?t=157618)
+	https://behindthesciences.com/electronics/connecting-ili9341-SPI-TouchScreen-lcd-to-a-raspberry-pi-in-python/
+	https://github.com/BLavery/lib_tft24T
+	https://www.waveshare.com/wiki/2.8inch_RPi_LCD_(A)
+	http://www.lcdwiki.com/3.5inch_RPi_Display
+	https://www.raspberrypi.org/forums/viewtopic.php?t=143581
 
 
 [table for another ILI9341 display](https://sudomod.com/forum/viewtopic.php?t=2312), adapted for this one

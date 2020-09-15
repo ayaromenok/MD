@@ -28,6 +28,36 @@ README
 
 [back to top](#toc)
 
+### DNN BackEnd/Target
+```
+    enum Backend
+    {
+        //! DNN_BACKEND_DEFAULT equals to DNN_BACKEND_INFERENCE_ENGINE if
+        //! OpenCV is built with Intel's Inference Engine library or
+        //! DNN_BACKEND_OPENCV otherwise.
+        DNN_BACKEND_DEFAULT = 0,
+        DNN_BACKEND_HALIDE,                //1
+        DNN_BACKEND_INFERENCE_ENGINE,      //2
+        DNN_BACKEND_OPENCV,                //3
+        DNN_BACKEND_VKCOM,                 //4 
+        DNN_BACKEND_CUDA                   //5   
+    };
+```
+   
+```     
+    enum Target
+    {
+        DNN_TARGET_CPU = 0,
+        DNN_TARGET_OPENCL,     //1
+        DNN_TARGET_OPENCL_FP16,//2
+        DNN_TARGET_MYRIAD,     //3
+        DNN_TARGET_VULKAN,     ///4
+        DNN_TARGET_FPGA,       //5
+        DNN_TARGET_CUDA,       //6
+        DNN_TARGET_CUDA_FP16   //7
+    };
+```
+
 ### Build<a name="build"></a>
 
 #### Android

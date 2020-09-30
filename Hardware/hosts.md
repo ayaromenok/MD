@@ -18,8 +18,8 @@
 129.168.1.121	rpi4
 
 #CM3P - Compute Module 3+ (new I/O board)
-192.168.1.130  	cm3p
-192.168.1.131  	cm3pe
+192.168.1.130  	cm3pw
+192.168.1.131  	cm3p
 ```
 
 #### howto configure

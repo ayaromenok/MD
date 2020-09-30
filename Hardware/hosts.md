@@ -10,12 +10,16 @@
 192.168.1.100   rpi3bw
 192.168.1.101   rpi3b
 
-#CM3 - Compute Module
+#CM3 - Compute Module 3(old I/O board)
 192.168.1.110  	cm3
 
 #RPi4 - 1GB
 192.168.1.120 	rpi4w
 129.168.1.121	rpi4
+
+#CM3P - Compute Module 3+ (new I/O board)
+192.168.1.130  	cm3p
+192.168.1.131  	cm3pe
 ```
 
 #### howto configure

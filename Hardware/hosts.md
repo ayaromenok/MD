@@ -20,6 +20,11 @@
 #CM3P - Compute Module 3+ (new I/O board)
 192.168.1.130  	cm3pw
 192.168.1.131  	cm3p
+
+#Jetson Nano
+192.168.1.140	jnw
+192.168.1.141	jn
+
 ```
 
 #### howto configure
@@ -49,7 +54,8 @@ static domain_name_servers=192.168.1.1 8.8.8.8
 ##### Ubuntu 18.04/Armbian
 
 *NetPlan* used
-
+ - Ketson don't use netplan
+ 
 - `sudo nano /etc/netplan/01-network-manager-all.yml`
 
 ```

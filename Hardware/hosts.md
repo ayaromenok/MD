@@ -25,6 +25,14 @@
 192.168.1.140	jnw
 192.168.1.141	jn
 
+#Asus TinkerBoard
+192.168.1.150	tbw
+192.168.1.151	tb
+
+#Nano Pi M4
+192.168.1.160	m4w
+192.168.1.161	m4
+
 ```
 
 #### howto configure

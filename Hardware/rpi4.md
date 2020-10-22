@@ -2,7 +2,7 @@
 
 ### Software
  - [Raspbian Buster](https://www.raspberrypi.org/downloads/raspbian) required;
-
+ - [Android 9.0 -LineageOS 16.0](https://konstakang.com/devices/rpi4/LineageOS16.0/)
 
 
 ### Hardware

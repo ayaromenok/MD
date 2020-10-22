@@ -13,6 +13,7 @@ rpicompute
 	- [Other OS](#otheros)
 		- [Motion OS](#motionos)
 		- [Ubuntu Mate](#ubuntumate)
+		- [Android](#android)
 - [CNC server](#cnc)
 
 
@@ -347,6 +348,14 @@ LIST OF DEVICES:
 
 [back to top](#toc)
 
+
+##### Android  <a name="android"></a>
+
+[Android 10/LineageOS 17.1](https://konstakang.com/devices/rpi3) 
+  - not working - Hardware video decoding & encoding (software decoding & encoding works)
+  - [gapps](https://opengapps.org/)
+
+[back to top](#toc)
 
 ### CNC <a name ="cnc"></a>
 

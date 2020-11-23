@@ -59,10 +59,15 @@ static routers=192.168.1.1
 static domain_name_servers=192.168.1.1 8.8.8.8
 ```
 
+##### Ubuntu 20.04
+
+`sudo nmtui`
+
+
 ##### Ubuntu 18.04/Armbian
 
 *NetPlan* used
- - Ketson don't use netplan
+ - Jetson don't use netplan
  
 - `sudo nano /etc/netplan/01-network-manager-all.yml`
 

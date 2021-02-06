@@ -1,7 +1,15 @@
 README
 ========================
 
-## Android 
+
+## Ace Player
+`sudo apt install snapd
+sudo snap install acestreamplayer`
+
+`acestreamplayer.engine --client-console`
+	then run `acestreamplayer`
+ 
+ # Android 
  - [SDK tools](https://developer.android.com/studio/#downloads)
  - OpenJDK 1.8 only - `sudo apt install openjdk-8-jdk-headless`
  - use SDK Manage - `./sdkmanager "platform-tools" "platforms;android-25" "ndk-bundle" "tools" "build-tools;29.0.2"`

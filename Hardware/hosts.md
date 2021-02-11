@@ -33,6 +33,10 @@
 192.168.1.160	m4w
 192.168.1.161	m4
 
+#Raspberry Pi 3A
+192.168.1.170   rpi3a
+192.168.1.170   rpi3aw
+
 ```
 
 #### howto configure

@@ -67,11 +67,22 @@ static domain_name_servers=192.168.1.1 8.8.8.8
 
 `sudo nmtui`
 
+##### Jetson
+
+sudo vi /etc/default/networking
+CONFIGURE_INTERFACES=no
+sudo vi /etc/network/interfaces
+
+auto eth0
+iface eth0 inet static
+  address 192.168.1.80
+  netmask 255.255.255.0
+  gateway 192.168.1.1
 
 ##### Ubuntu 18.04/Armbian
 
 *NetPlan* used
- - Jetson don't use netplan
+ 
  
 - `sudo nano /etc/netplan/01-network-manager-all.yml`
 

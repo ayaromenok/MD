@@ -118,3 +118,11 @@ network:
       dhcp4: yes
       dhcp6: yes
 ```
+
+autologin
+sudo systemctl edit getty@tty1.service
+
+[Service]
+ExecStart=
+ExecStart=-/sbin/agetty --noissue --autologin pi %I $TERM
+Type=idle

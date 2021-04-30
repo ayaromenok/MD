@@ -37,6 +37,10 @@
 192.168.1.170   rpi3a
 192.168.1.170   rpi3aw
 
+#Jetson Xavier NX
+192.168.1.180   xnw
+192.168.1.181   nx
+
 ```
 
 #### howto configure

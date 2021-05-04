@@ -7,6 +7,9 @@ tegraTx1Nano
 ## System
 `tegra210-porg-p3448`
 
+### ffmpeg
+https://github.com/jocover/jetson-ffmpeg
+
 ### jtop
 
 - `sudo apt install python-pip`
@@ -19,6 +22,8 @@ tegraTx1Nano
 [nvpdf](https://developer.download.nvidia.com/embedded/L4T/r31_Release_v1.0/Docs/Accelerated_GStreamer_User_Guide.pdf)
 
 [ridgerun pipelines](https://developer.ridgerun.com/wiki/index.php?title=Gstreamer_pipelines_for_Jetson_TX1)
+
+It's no libnvidia-encode.so.1 on jetson so nvh265enc will not work. nvv4l2h265enc or omxh265enc should be used instead
 
 ### Kernel
 [compile for arm](https://github.com/umiddelb/armhf/wiki/How-To-compile-a-custom-Linux-kernel-for-your-ARM-device)

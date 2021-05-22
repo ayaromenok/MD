@@ -1,0 +1,4 @@
+PORT     STATE SERVICE
+7060/tcp open  unknown
+8060/tcp open  aero
+9060/tcp open  CardWeb-IO

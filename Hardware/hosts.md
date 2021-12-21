@@ -41,6 +41,8 @@
 192.168.1.180   xnw
 192.168.1.181   nx
 
+#BeagleBone Blue
+192.168.1.190
 ```
 
 #### howto configure
@@ -130,3 +132,7 @@ sudo systemctl edit getty@tty1.service
 ExecStart=
 ExecStart=-/sbin/agetty --noissue --autologin pi %I $TERM
 Type=idle
+
+##### Beaglebone
+https://wiki.seeedstudio.com/BeagleBone_Blue/#step4-connect-to-wifi
+https://github.com/beagleboard/beaglebone-blue/wiki/Setting-a-static-ip-address-in-wifi

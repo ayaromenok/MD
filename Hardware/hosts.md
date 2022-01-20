@@ -1,14 +1,14 @@
 ```
 #gangut, eth0
-192.168.1.11    gt
+192.168.0.10    gt
 
 #x250, wifi/eth0
-192.168.1.20    x250w
-192.168.1.21    x250
+192.168.0.12    x250
+192.168.0.13    x250w
 
 #RPi3B, printer host
-192.168.1.100   rpi3bw
-192.168.1.101   rpi3b
+192.168.0.100   rpi3b
+192.168.0.101   rpi3bw
 
 #CM3 - Compute Module 3(old I/O board)
 192.168.1.110  	cm3
@@ -26,8 +26,8 @@
 192.168.1.141	jn
 
 #Asus TinkerBoard
-192.168.1.150	tbw
-192.168.1.151	tb
+192.168.0.91	tbw
+192.168.0.90	tb
 
 #Nano Pi M4
 192.168.1.160	m4w
@@ -136,3 +136,18 @@ Type=idle
 ##### Beaglebone
 https://wiki.seeedstudio.com/BeagleBone_Blue/#step4-connect-to-wifi
 https://github.com/beagleboard/beaglebone-blue/wiki/Setting-a-static-ip-address-in-wifi
+
+systemctl status systemd-resolved.service
+sudo systemctl disable systemd-resolved.service
+sudo service systemd-resolved stop
+sudo systemctl mask systemd-resolved.service
+sudo systemctl daemon-reload
+
+
+Connman uses systemd tmpfiles to overwrite /etc/resolv.conf, you can
+edit /usr/lib/tmpfiles.d/connman_resolvconf.conf to avoid
+/etc/resolv.conf be overwriten (remove +, on L+)
+
+sudo nano /etc/resolv.conf
+nameserver 192.168.1.1
+nameserver 8.8.8.8

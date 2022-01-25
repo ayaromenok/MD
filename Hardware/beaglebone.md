@@ -2,6 +2,9 @@
 
 ### Software
 
+https://rcn-ee.net/rootfs/bb.org/testing/2022-01-17/buster-console/
+bone-debian-10.11-console-armhf-2022-01-17-1gb.img.xz
+
 Flashing eMMC
 
 
@@ -16,6 +19,14 @@ When all blue LED's is ON - flashing is finished
 #### Wi-Fi
 [connect to WiFi ](https://wiki.seeedstudio.com/BeagleBone_Blue/#step4-connect-to-wifi)
 
+```
+connmanctl
+enable wifi
+scan wifi
+services
+agent on
+connect wifi_987bf3d5d252_617a6e32_managed_psk
+quit
 ##### Set static IP
 ```
 connmanctl config wifi_987bf3d5d252_617a616e6574_managed_psk --ipv4 manual 192.168.1.190 255.255.255.0 192.168.1.1 --nameservers 192.168.1.1

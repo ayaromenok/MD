@@ -20,5 +20,8 @@ Passphrase? $PASS
 Connected wifi_XXX_managed_psk
 connmanctl> quit
 ```
+settings saved in `/var/lib/connman`
+
+
 #### X230
 15.x https://github.com/littlegtplr/Hackintosh-X230-macOS

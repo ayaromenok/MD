@@ -22,6 +22,24 @@ connmanctl> quit
 ```
 settings saved in `/var/lib/connman`
 
+##### set log size
+`journalctl --vacuum-time=10d`
+
+##### set swap size
+1x8GB
+
+```
+sudo swapoff -a    
+sudo dd if=/dev/zero of=/swapfile bs=1G count=8    
+sudo chmod 600 /swapfile    
+sudo mkswap /swapfile
+sudo swapon /swapfile
+grep SwapTotal /proc/meminfo
+```
+```
+/etc/fstab 
+/swapfile none swap sw 0 0
+```
 
 #### X230
 15.x https://github.com/littlegtplr/Hackintosh-X230-macOS

@@ -6,15 +6,17 @@ RISC-V
 	[quemu](#qemu)
 
 ## Qemu <a name="qemu"></a>
-QEmu support RVV 0.7.1 until 20211220
-QEmu support RVV 0.10(~v1.0) from 2022021
+
+ - QEmu support RVV 0.7.1 until 20211220
+ - QEmu support RVV 0.10(~v1.0) from 2022021
 
 ## Compilers - Vector eXtension support
- https://github.com/riscv/riscv-gnu-toolchain - v0.10(~v1.0)
- gcc - no
- https://github.com/riscv-collab/riscv-gcc - basic (added 20211123)
- clang -  v0.10(close to final)
- xuante - v0.7.1
+
+ - https://github.com/riscv/riscv-gnu-toolchain - v0.10(~v1.0)/int
+ - gcc - no
+ - https://github.com/riscv-collab/riscv-gcc - basic (added 20211123)
+ - clang -  v0.10(close to final)
+ - xuante - v0.7.1
 
 ## Links
  - https://gms.tf/riscv-vector.html

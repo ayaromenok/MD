@@ -1,0 +1,5 @@
+ThinkPad x250
+https://github.com/mrrfv/ThinkPad-X250-macOS-Monterey
+
+AMD Ryzen
+https://github.com/AMD-OSX/AMD_Vanilla

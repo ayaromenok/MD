@@ -31,14 +31,14 @@ RISC-V
 
 ## Port to v1.0 <a name="port"></a>
 
-|| v 0.8.0 || v 1.0   || description ||
-|----------|----------|---------------|
+| v 0.8.0  | v 1.0    | description   |
+|----------|----------|:--------------|
 | vlb.v | vle8.v  |  8-bit load (signed) |
 | vlh.v | vle16.v | 16-bit load (signed) |
 | vlw.v | vle32.v | 32-bit load (signed) |
 | vlbu.v | vle8.v  |  8-bit load (unsigned) |
 | vlhu.v | vle16.v | 16-bit load (unsigned) |
 | vlwu.v | vle32.v | 32-bit load (unsigned) |
-| ----  | vle64.v | 64-bit load |
+| ---  | vle64.v | 64-bit load |
 
 [back to top](#toc)

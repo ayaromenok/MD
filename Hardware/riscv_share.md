@@ -7,6 +7,7 @@ RISC-V
  - [RISC-V QEmu](#qemu)
  - [Compiler support](#compilers)
  - [Links](#links)
+ - [port to v1.0](#port)
 
 ## Qemu <a name="qemu"></a>
 
@@ -27,5 +28,17 @@ RISC-V
  - [X11 riscv/qemu](https://zxnord.medium.com/launching-x11-risc-v-applications-on-qemu-debian-efa62b4c4657)
  - [xuantie-gcc-10](https://github.com/T-head-Semi/gcc)
  - [c910v vector samples](https://github.com/c-sky/xuantie-vector-demos)
+
+## Port to v1.0 <a name="port"></a>
+
+|| v 0.8.0 || v 1.0   || description ||
+|----------|----------|---------------|
+| vlb.v | vle8.v  |  8-bit load (signed) |
+| vlh.v | vle16.v | 16-bit load (signed) |
+| vlw.v | vle32.v | 32-bit load (signed) |
+| vlbu.v | vle8.v  |  8-bit load (unsigned) |
+| vlhu.v | vle16.v | 16-bit load (unsigned) |
+| vlwu.v | vle32.v | 32-bit load (unsigned) |
+| ----  | vle64.v | 64-bit load |
 
 [back to top](#toc)

@@ -16,6 +16,7 @@ RISC-V
  
  - [RISC-V Vector extension](https://github.com/riscv/riscv-v-spec)
  - [GCC Intrinsic](https://github.com/riscv-non-isa/rvv-intrinsic-doc/tree/v0.10)
+ - [Kernel patches to support RVV](https://github.com/ayaromenok/MD/blob/master/Hardware/riscv_rvv/kernel_patches.md)
 
 [back to top](#toc)
 

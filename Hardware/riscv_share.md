@@ -4,7 +4,7 @@ RISC-V
 
 ## Table of Context <a name="toc"></a>
 
- - [Docuemntation](#doc)
+ - [Documentation](#doc)
  - [RISC-V QEmu](#qemu)
  - [Compiler support](#compilers)
  - [Links](#links)

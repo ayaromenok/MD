@@ -4,11 +4,20 @@ RISC-V
 
 ## Table of Context <a name="toc"></a>
 
+ - [Docuemntation](#doc)
  - [RISC-V QEmu](#qemu)
  - [Compiler support](#compilers)
  - [Links](#links)
  - [port to v1.0](#port)
  - [kernel](#kernel)
+
+
+## Documentaion <a name="doc"></a>
+ 
+ - [RISC-V Vector extension](https://github.com/riscv/riscv-v-spec)
+ - [GCC Intrinsic](https://github.com/riscv-non-isa/rvv-intrinsic-doc/tree/v0.10)
+
+[back to top](#toc)
 
 ## Qemu <a name="qemu"></a>
 

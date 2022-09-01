@@ -13,11 +13,14 @@ OS Window/Gangut
 | Name | Result | Details|
 |---|---|---|
 | AMD Ryzen3 2200G(3.5GHz)  | 408 | CPU only |
-| AMD Ryzen3 2200G(3.5GHz)  | 298 | GPU only |
+| AMD Ryzen3 2200G(1.1GHz)  | 298 | GPU only |
 | GF1050(5CU, 1445MHZ)      | 589 | OpenCL 3.0/Cuda 11.7.101|
 | GF1050 + Ryzen3 CPU       | 832 | OpenCL 3.0/Cuda 11.7.101|
 | GF1050 + Ryzen3 GPU       | 856 | Dual GPU |
 | GF1050 + Ryzen3 CPU+GPU   | 1075 | Dual GPU + CPU |
+| AMD Ryzen5 5600G(3.9GHz)  | 1131 | CPU only |
+| AMD Ryzen5 5600G(1.9GHz)  | 344 | GPU only |
+| AMD Ryzen5 5600G(1.9GHz)  | 1364 | CPU+GPU |
 
 [back to top](#toc)
 
@@ -38,9 +41,11 @@ OS Windows/Gangut
 | Name | Result | Details|
 |---|---|---|
 | AMD Ryzen3 2200G(3.5GHz)    | 1320 | CPU only |
-| AMD Ryzen3 2200G(3.5GHz)    | 3120 | GPU only |
+| AMD Ryzen3 2200G(1.1GHz)    | 3120 | GPU only |
 | GF1050 (5CU, 1.455GHz) | 7121 | GeForce 1050/2GB|
 | GF1050 + Ryzen3 GPU | 10385 | Dual GPU |
+| AMD Ryzen5 5600G(3.9GHz)    | 3899 | CPU only |
+| AMD Ryzen5 5600G(1.9GHz)    | 3506 | GPU only |
 
 [back to top](#toc)
 
@@ -49,6 +54,7 @@ OS Windows/Gangut
 | Name | Result,avg | Result,99% | Details|
 |---|---|---|---|
 | AMD Ryzen3 2200G(3.5GHz)    | 21.444 | 39.056 | Gathering storm/Graphics 2560x1080|
+| AMD Ryzen3 2200G(3.5GHz)    | 32.192 | 41.454 | Gathering storm/Graphics 2560x1080|
 | GF1050 + Ryzen3 CPU | xxx | Gathering storm/Graphics |
 
 
@@ -58,7 +64,9 @@ OS Windows/Gangut
 | Name | Mark|Details|
 |---|---|---|
 | AMD Ryzen3 2200G   | CPU only | 4core, 3500MHz|
-| AMD Ryzen3 2200G   | GPU only | gfx902, 5CU, 1100MHz, OpenCL 2.1(3444.0)|
-| NVidia GF 1050/2GB | GPU only | gf1050, 8CU, 1455MHz, OpenCL 3.0/CUDA 11.7.101 |
+| AMD Ryzen3 2200G   | GPU only | gfx902, 8CU, 1100MHz, OpenCL 2.1(3444.0)|
+| NVidia GF 1050/2GB | GPU only | gf1050, 5CU, 1455MHz, OpenCL 3.0/CUDA 11.7.101 |
+| AMD Ryzen5 5600G   | CPU only | 6core/12threads, 3900MHz|
+| AMD Ryzen5 5600G   | GPU only | gfx90c, 7CU, 1900MHz, OpenCL 2.1(3444.0)|
 
 [back to top](#toc)

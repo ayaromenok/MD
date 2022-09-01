@@ -46,10 +46,11 @@ OS Windows/Gangut
 
 ## Civ6 <a name="civ6"></a>
 OS Windows/Gangut
-| Name | Result | Details|
-|---|---|---|
-| AMD Ryzen3 2200G(3.5GHz)    | xxx |  |
-| GF1050 + Ryzen3 GPU | xxx |  |
+| Name | Result,avg | Result,99% | Details|
+|---|---|---|---|
+| AMD Ryzen3 2200G(3.5GHz)    | 21.444 | 39.056 | Gathering storm/Graphics 2560x1080|
+| GF1050 + Ryzen3 CPU | xxx | Gathering storm/Graphics |
+
 
 [back to top](#toc)
 

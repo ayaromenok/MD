@@ -1,5 +1,6 @@
 ```
 #gangut, eth0
+#nvidia_drm.modeset=1 must be set in boot for AMD+NVidia GPUS works together
 192.168.0.10    gt
 
 #x250, wifi/eth0

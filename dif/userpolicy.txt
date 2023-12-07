@@ -1,0 +1,4 @@
+No user data collected or sending by this application.
+
+Local storage used to save temporary or final result of application activity.
+

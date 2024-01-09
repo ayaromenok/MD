@@ -8,7 +8,10 @@ sudo snap install acestreamplayer`
 
 `acestreamplayer.engine --client-console`
 	then run `acestreamplayer`
- 
+## Repetier host
+
+`sudo apt install mono-complete` - for GDI.dll, used by Windows.Forms
+
  # Android 
  - [SDK tools](https://developer.android.com/studio/#downloads)
  - OpenJDK 1.8 only - `sudo apt install openjdk-8-jdk-headless`

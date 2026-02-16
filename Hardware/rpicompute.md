@@ -104,7 +104,7 @@ VNC:
 
 #### dual Cam <a name ="dualcam"></a>
 - `sudo raspi-config` and enable the camera;
-- `wget https://www.raspberrypi.org/documentation/hardware/computemodule/dt-blob-dualcam.dts`
+- `wget https://raw.githubusercontent.com/6by9/documentation/refs/heads/master/hardware/computemodule/dt-blob-dualcam.dts`
 - `dtc -I dts -O dtb -o dt-blob-dualcam.dtb dt-blob-dualcam.dts`
 - `sudo cp dt-blob-dualcam.dtb /boot/dt-blob.bin`
 - `sudo reboot` to load blobs;
